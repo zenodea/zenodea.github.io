@@ -58,9 +58,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
+  name   : "Zeno de Angeli"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Master's student in Information Security, specializing in Cryptography and Cryptocurrency."
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
