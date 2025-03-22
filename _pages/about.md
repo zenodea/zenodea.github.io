@@ -8,7 +8,6 @@ classes: wide
 
 <div class="about-section">
   <div class="about-header">
-    <h1>About Me</h1>
     <p>With a Bachelor's degree in Computer Science, I bring a robust foundation in technology alongside extensive experience working with diverse technologies. Recognized for my adaptability and quick learning, I thrive in dynamic environments where challenges drive innovation. Passionate about leveraging my skills to tackle new and complex problems, I am committed to continuous growth and contributing positively to any team or project.</p>
   </div>
 
