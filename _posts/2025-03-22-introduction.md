@@ -1,8 +1,8 @@
 ---
-title: "Test"
+title: "Mysticeti Consensus Protocol"
 last_modified_at: 2025-03-22T14:30:45+00:00
 categories:
-  - Notes
+  - Write-Ups
 tags:
   - Cryptocurrencies
   - Consensus
@@ -23,6 +23,7 @@ tags:
     }
   });
 </script>
+A major objective of my thesis is to introduce a fallback consensus protocol, known as the Mahi-Mahi Consensus Protocol, to the Mysticeti protocol. This will, in theory, allow Mysticeti to have *liveness* during moments of asynchrony in the system. This write-up represents my first notes on the protocol.
 
 ## Block Structure
 A Validator $\mathcal{V}$ collects the following to form block $\mathcal{B}$:
@@ -104,9 +105,3 @@ r' > r+2
 $$
 ### Commit Sequence
 After all the rules above are applied, the validator will derive an ordered sequence of slots. This validator will iterate over the sequence, and commit all slots marked as `to-commit`, while skipping slots marked as `to-skip`
-
-# Questions
-1. How does Mysticeti-C lose liveness under asynchronous settings?
-According to the Mahi-Mahi paper, to maintain liveness in asynchronous conditions, the use of the **global perfect coin** to make sure that an adversary can't indefinitely manipulate messages schedules. 
-
-2. How does [[Mahi-Mahi]] go around this?
