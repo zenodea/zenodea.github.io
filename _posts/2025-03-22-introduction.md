@@ -1,5 +1,5 @@
 ---
-title: "Post: Test"
+title: "Test"
 last_modified_at: 2025-03-22T14:30:45+00:00
 categories:
   - Notes

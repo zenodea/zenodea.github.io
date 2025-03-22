@@ -74,6 +74,9 @@ author:
     - label: "Linked In"
       icon: "fa-brands fa-linkedin"
       url: "https://www.linkedin.com/in/zeno-de-angeli/"
+    - label: "CV"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "/assets/files/cv.pdf"
 
 footer:
   links:
@@ -84,7 +87,7 @@ footer:
       icon: "fab fa-fw fa-x-twitter"
       url: "https://x.com/zeno_dea"
     - label: "Linked In"
-      icon: "fa-brands fa-linkedin"
+      icon: "fa-brandcvs fa-linkedin"
       url: "https://www.linkedin.com/in/zeno-de-angeli/"
 
 defaults:
