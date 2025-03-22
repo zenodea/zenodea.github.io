@@ -14,22 +14,50 @@ classes: wide
   <hr class="section-divider">
 
   <h2 class="section-title">Coding Experience</h2>
-  <div class="skills-grid">
-    <div class="skill-item">
-      <h3>C</h3>
-      <p>CLI Applications / Embedded Systems</p>
+  <div class="skills-carousel">
+    <div class="skill-card" onclick="this.classList.toggle('flipped')">
+      <div class="skill-card-inner">
+        <div class="skill-card-front">
+          <h3>C</h3>
+          <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+        </div>
+        <div class="skill-card-back">
+          <p>CLI Applications / Embedded Systems</p>
+        </div>
+      </div>
     </div>
-    <div class="skill-item">
-      <h3>Java</h3>
-      <p>Software Development</p>
+    <div class="skill-card" onclick="this.classList.toggle('flipped')">
+      <div class="skill-card-inner">
+        <div class="skill-card-front">
+          <h3>Java</h3>
+          <div class="skill-icon"><i class="fab fa-java"></i></div>
+        </div>
+        <div class="skill-card-back">
+          <p>Software Development</p>
+        </div>
+      </div>
     </div>
-    <div class="skill-item">
-      <h3>Javascript/PHP</h3>
-      <p>Fullstack Developer</p>
+    <div class="skill-card" onclick="this.classList.toggle('flipped')">
+      <div class="skill-card-inner">
+        <div class="skill-card-front">
+          <h3>Javascript/PHP</h3>
+          <div class="skill-icon"><i class="fab fa-js"></i></div>
+        </div>
+        <div class="skill-card-back">
+          <p>Fullstack Developer</p>
+        </div>
+      </div>
     </div>
-    <div class="skill-item">
-      <h3>Python</h3>
-      <p>Machine Learning / Office work</p>
+    <div class="skill-card" onclick="this.classList.toggle('flipped')">
+      <div class="skill-card-inner">
+        <div class="skill-card-front">
+          <h3>Python</h3>
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+        </div>
+        <div class="skill-card-back">
+          <p>Machine Learning / Office work</p>
+        </div>
+      </div>
     </div>
   </div>
 
