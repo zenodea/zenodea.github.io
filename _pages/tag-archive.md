@@ -19,12 +19,6 @@ classes: wide
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     border: 1px solid #4a5568;
     margin-bottom: 2rem;
-    transition: transform 0.2s;
-  }
-  
-  .experience__item:hover {
-    transform: translateY(-5px);
-    background: #1a202c;
   }
   
   .experience__header {
