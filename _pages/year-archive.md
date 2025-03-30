@@ -8,17 +8,17 @@ classes: wide
 <style>
   /* Academic institution styling */
   .academic-institution__title {
-    color: #333;
+    color: #f5f5f5;
     margin-bottom: 0.2rem;
   }
   
   .academic-institution__degree {
-    color: #0066cc;
+    color: #e6e6e6;
     margin-bottom: 0.2rem;
   }
   
   .academic-institution__date {
-    color: #646769;
+    color: #d9d9d9;
     margin-top: 0;
     font-style: italic;
   }
@@ -26,20 +26,13 @@ classes: wide
   /* Skills styling */
   .skill-tag {
     display: inline-block;
-    background-color: #f8f9fa;
-    color: #494e52;
+    background-color: #808080;
+    color: #f5f5f5;
     padding: 0.4rem 0.8rem;
     margin: 0.3rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    border: 1px solid #e9ecef;
-    transition: all 0.2s ease;
-  }
-  
-  .skill-tag:hover {
-    background-color: #494e52;
-    color: white;
-    transform: translateY(-2px);
+    border: 1px solid #707070;
   }
   
   /* Section divider */
@@ -47,7 +40,7 @@ classes: wide
     margin: 2.5rem 0;
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 102, 204, 0.1), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(245, 245, 245, 0), rgba(245, 245, 245, 0.1), rgba(245, 245, 245, 0));
   }
   
   .academics {
@@ -65,12 +58,13 @@ classes: wide
   }
   
   .academic-institution__logo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     margin-right: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
   }
   
   .academic-institution__logo img {
@@ -81,7 +75,7 @@ classes: wide
   
   .academic-institution__title {
     margin: 0 0 0.5rem 0;
-    color: #3d4144;
+    color: #f5f5f5;
   }
   
   .academic-institution__degree {
@@ -96,7 +90,7 @@ classes: wide
   .skills-title {
     margin: 0 0 1rem 0;
     font-size: 1.1rem;
-    color: #3d4144;
+    color: #f5f5f5;
     border-bottom: 2px solid #eaeaea;
     padding-bottom: 0.5rem;
   }
