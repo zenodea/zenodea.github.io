@@ -58,8 +58,8 @@ classes: wide
   }
   
   .academic-institution__logo {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: auto;
     margin-right: 1.5rem;
     display: flex;
     align-items: center;
@@ -122,11 +122,11 @@ classes: wide
         <h3 class="skills-title">Key Areas of Study</h3>
         <div class="skills-grid">
           <div class="skill-tag">Applied Cryptography</div>
-          <div class="skill-tag">Blockchain Security</div>
+          <div class="skill-tag">Consensus Protocols Development</div>
           <div class="skill-tag">Zero-Knowledge Proofs</div>
           <div class="skill-tag">Network Security</div>
-          <div class="skill-tag">Secure Systems Engineering</div>
-          <div class="skill-tag">Privacy Technologies</div>
+          <div class="skill-tag">Computer Security</div>
+          <div class="skill-tag">Privacy Enhancing Technologies</div>
         </div>
       </div>
     </div>
@@ -152,14 +152,11 @@ classes: wide
       <div class="academic-institution__skills">
         <h3 class="skills-title">Skills Acquired</h3>
         <div class="skills-grid">
-          <div class="skill-tag">Algorithm Design</div>
-          <div class="skill-tag">Data Structures</div>
+          <div class="skill-tag">Algorithm and Data Structures</div>
           <div class="skill-tag">Software Engineering</div>
           <div class="skill-tag">Web Development</div>
-          <div class="skill-tag">Database Systems</div>
+          <div class="skill-tag">Database Development</div>
           <div class="skill-tag">Machine Learning</div>
-          <div class="skill-tag">Computer Vision</div>
-          <div class="skill-tag">Object-Oriented Programming</div>
         </div>
       </div>
     </div>
@@ -187,10 +184,8 @@ classes: wide
         <div class="skills-grid">
           <div class="skill-tag">Critical Thinking</div>
           <div class="skill-tag">Research Methods</div>
-          <div class="skill-tag">Mathematical Reasoning</div>
-          <div class="skill-tag">Scientific Inquiry</div>
-          <div class="skill-tag">Intercultural Understanding</div>
-          <div class="skill-tag">Programming Fundamentals</div>
+          <div class="skill-tag">Mathematics</div>
+          <div class="skill-tag">Physics</div>
         </div>
       </div>
     </div>

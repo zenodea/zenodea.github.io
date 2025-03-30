@@ -25,7 +25,7 @@ classes: wide
         <p class="experience__position"><strong>Teacher Assistant</strong></p>
         <p class="experience__date">September 2022 - December 2022</p>
         <div class="experience__description">
-          <p>I helped students during seminar sessions for a Compiler Architecture module, explaining complex concepts to groups of students.</p>
+          <p>I helped students during seminar sessions for a Compiler Architecture module, explaining RISC-V architecture, and conducting help sessions.</p>
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@ classes: wide
     <div class="experience__content">
       <h2 class="experience__title">NorthsouthUX</h2>
       <p class="experience__position"><strong>Full Stack Web Developer</strong></p>
-      <p class="experience__date">May 2023 - Present</p>
+      <p class="experience__date">May 2023 - Dec 2023</p>
       <div class="experience__description">
         <p>As a Full-stack Developer at NorthsouthUX, my primary responsibility involves transforming Figma design specifications into fully functional websites, ensuring the accurate implementation of visual concepts while maintaining optimal user experience standards.</p>
       </div>
