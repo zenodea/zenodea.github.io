@@ -42,9 +42,12 @@ classes: wide
   }
   
   .academic-institution__logo img {
+    width: 100%;
+    height: 100%;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    display: block;
   }
   
   .academic-institution__title {

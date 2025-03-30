@@ -145,12 +145,15 @@ classes: wide
 
 .profile-content {
   text-align: center;
+  margin-top: 2rem;
 }
 
 .profile-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
   color: #e2e8f0;
+  text-align: center;
+  font-weight: bold;
 }
 
 .profile-description {
@@ -159,6 +162,7 @@ classes: wide
   color: #cbd5e0;
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .profile-highlights {
