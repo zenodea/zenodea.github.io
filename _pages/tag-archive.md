@@ -103,7 +103,7 @@ classes: wide
   <div class="experience__item">
     <div class="experience__header">
       <div class="experience__logo">
-        <img src="/assets/images/university-logo.jpg" alt="University of Sussex Logo">
+        <img src="/assets/images/sussexlogo.png" alt="University of Sussex Logo">
       </div>
       <div class="experience__title-container">
         <h2 class="experience__title">University of Sussex</h2>
@@ -147,7 +147,7 @@ classes: wide
   <div class="experience__item">
     <div class="experience__header">
       <div class="experience__logo">
-        <img src="/assets/images/company3-logo.jpg" alt="NorthsouthUX Logo">
+        <img src="/assets/images/northsouthUX.png" alt="NorthsouthUX Logo">
       </div>
       <div class="experience__title-container">
         <h2 class="experience__title">NorthsouthUX</h2>
