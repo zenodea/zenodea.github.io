@@ -256,7 +256,6 @@ classes: wide
   border: 1px solid #4a5568;
 }
 
-
 .experience-icon {
   font-size: 2.5rem;
   color: #63b3ed;
