@@ -29,7 +29,7 @@ classes: wide
   
   .academic-institution__logo {
     width: 200px;
-    height: auto;
+    height: 200px;
     margin-right: 1.5rem;
     display: flex;
     align-items: center;
