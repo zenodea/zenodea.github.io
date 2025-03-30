@@ -110,21 +110,15 @@ classes: wide
       <div class="posts__grid">
         {% for post in posts %}
           <article class="post-card">
-            {% if post.header.image %}
-              <img src="{{ post.header.image }}" alt="{{ post.title }}" class="post-card__image">
-            {% endif %}
             <div class="post-card__content">
-              <div class="post-card__category">{{ category }}</div>
               <h3 class="post-card__title">
                 <a href="{{ post.url | relative_url }}" style="color: inherit; text-decoration: none;">{{ post.title }}</a>
               </h3>
               <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
               <div class="post-card__meta">
                 <span><i class="far fa-calendar"></i>{{ post.date | date: "%B %d, %Y" }}</span>
-                {% if post.read_time %}
-                  <span><i class="far fa-clock"></i>{{ post.read_time }} min read</span>
-                {% endif %}
               </div>
+              <div class="post-card__category">{{ category }}</div>
             </div>
           </article>
         {% endfor %}
