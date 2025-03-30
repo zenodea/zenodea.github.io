@@ -6,49 +6,25 @@ author_profile: true
 classes: wide
 ---
 <style>
-  /* Academic institution styling */
-  .academic-institution__title {
-    color: #f5f5f5;
-    margin-bottom: 0.2rem;
-  }
-  
-  .academic-institution__degree {
-    color: #e6e6e6;
-    margin-bottom: 0.2rem;
-  }
-  
-  .academic-institution__date {
-    color: #d9d9d9;
-    margin-top: 0;
-    font-style: italic;
-  }
-  
-  /* Skills styling */
-  .skill-tag {
-    display: inline-block;
-    background-color: #808080;
-    color: #f5f5f5;
-    padding: 0.4rem 0.8rem;
-    margin: 0.3rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    border: 1px solid #707070;
-  }
-  
-  /* Section divider */
-  .section-divider {
-    margin: 2.5rem 0;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(245, 245, 245, 0), rgba(245, 245, 245, 0.1), rgba(245, 245, 245, 0));
-  }
-  
   .academics {
-    margin: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
   }
   
   .academic-institution {
+    background: #2d3748;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border: 1px solid #4a5568;
     margin-bottom: 2rem;
+    transition: transform 0.2s;
+  }
+  
+  .academic-institution:hover {
+    transform: translateY(-5px);
+    background: #1a202c;
   }
   
   .academic-institution__header {
@@ -65,6 +41,10 @@ classes: wide
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: #1a202c;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #4a5568;
   }
   
   .academic-institution__logo img {
@@ -75,23 +55,50 @@ classes: wide
   
   .academic-institution__title {
     margin: 0 0 0.5rem 0;
-    color: #f5f5f5;
+    color: #e2e8f0;
+    font-size: 1.8rem;
   }
   
   .academic-institution__degree {
-    margin: 0;
-    font-size: 1.1rem;
+    color: #cbd5e0;
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+  }
+  
+  .academic-institution__date {
+    color: #a0aec0;
+    margin-top: 0;
+    font-style: italic;
   }
   
   .academic-institution__description {
     margin-bottom: 1.5rem;
+    color: #cbd5e0;
+    line-height: 1.6;
+  }
+  
+  .skill-tag {
+    display: inline-block;
+    background-color: #1a202c;
+    color: #cbd5e0;
+    padding: 0.4rem 0.8rem;
+    margin: 0.3rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #4a5568;
+    transition: transform 0.2s;
+  }
+  
+  .skill-tag:hover {
+    transform: translateX(5px);
+    background: #2d3748;
   }
   
   .skills-title {
     margin: 0 0 1rem 0;
-    font-size: 1.1rem;
-    color: #f5f5f5;
-    border-bottom: 2px solid #eaeaea;
+    font-size: 1.3rem;
+    color: #e2e8f0;
+    border-bottom: 2px solid #4a5568;
     padding-bottom: 0.5rem;
   }
   
@@ -99,6 +106,27 @@ classes: wide
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+  }
+  
+  .section-divider {
+    margin: 3rem 0;
+    border: none;
+    border-top: 2px solid #4a5568;
+  }
+
+  @media (max-width: 768px) {
+    .academics {
+      padding: 1rem;
+    }
+    
+    .academic-institution__header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .academic-institution__logo {
+      margin: 0 0 1rem 0;
+    }
   }
 </style>
 
@@ -132,7 +160,6 @@ classes: wide
     </div>
   </div>
 
-  <hr class="section-divider">
 
   <div class="academic-institution">
     <div class="academic-institution__header">
@@ -161,8 +188,6 @@ classes: wide
       </div>
     </div>
   </div>
-
-  <hr class="section-divider">
 
   <div class="academic-institution">
     <div class="academic-institution__header">
