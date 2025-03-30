@@ -133,7 +133,7 @@ classes: wide
   
   .academic-institution__title {
     margin: 0 0 0.5rem 0;
-    color: #2a76dd;
+    color: #3d4144;
   }
   
   .academic-institution__degree {
@@ -144,7 +144,7 @@ classes: wide
   .academic-institution__date {
     margin: 0.25rem 0 0 0;
     font-style: italic;
-    color: #666;
+    color: #646769;
   }
   
   .academic-institution__description {
@@ -154,7 +154,7 @@ classes: wide
   .skills-title {
     margin: 0 0 1rem 0;
     font-size: 1.1rem;
-    color: #333;
+    color: #3d4144;
     border-bottom: 2px solid #eaeaea;
     padding-bottom: 0.5rem;
   }
@@ -166,17 +166,17 @@ classes: wide
   }
   
   .skill-tag {
-    background-color: #f0f7ff;
-    border: 1px solid #d0e3ff;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
     border-radius: 20px;
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
-    color: #2a76dd;
+    color: #494e52;
     transition: all 0.2s ease;
   }
   
   .skill-tag:hover {
-    background-color: #2a76dd;
+    background-color: #494e52;
     color: white;
     transform: translateY(-2px);
   }
