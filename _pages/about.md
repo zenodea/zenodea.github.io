@@ -256,10 +256,6 @@ classes: wide
   border: 1px solid #4a5568;
 }
 
-.experience-card:hover {
-  transform: translateY(-5px);
-  background: #1a202c;
-}
 
 .experience-icon {
   font-size: 2.5rem;

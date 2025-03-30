@@ -118,8 +118,7 @@ classes: wide
               <div class="post-card__meta">
                 <span><i class="far fa-calendar"></i>{{ post.date | date: "%B %d, %Y" }}</span>
               </div>
-    <br>
-    <br>
+              <br>
               <div class="post-card__category">{{ category }}</div>
             </div>
           </article>
