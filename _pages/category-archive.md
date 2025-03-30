@@ -1,5 +1,5 @@
 ---
-title: "Blog Posts"
+title: "Blog"
 permalink: /posts/
 layout: single
 author_profile: true
@@ -118,6 +118,8 @@ classes: wide
               <div class="post-card__meta">
                 <span><i class="far fa-calendar"></i>{{ post.date | date: "%B %d, %Y" }}</span>
               </div>
+    <br>
+    <br>
               <div class="post-card__category">{{ category }}</div>
             </div>
           </article>
