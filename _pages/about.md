@@ -93,7 +93,7 @@ classes: wide
         <h3>MSc Information Security</h3>
         <p class="experience-location">University College London</p>
         <p class="experience-description">Researching blockchain security and privacy-preserving technologies. Focus on cryptography and cryptocurrency systems.</p>
-        <a href="/academics/" class="read-more-btn">Learn More</a>
+        <a href="/academics/" class="btn btn--primary">Learn More</a>
       </div>
 
       <div class="experience-card">
@@ -103,7 +103,7 @@ classes: wide
         <h3>Research Assistant</h3>
         <p class="experience-location">UCL</p>
         <p class="experience-description">Working on novel technologies and methodologies in security research. Quick adaptation to new tools and frameworks.</p>
-        <a href="/experience/" class="read-more-btn">Learn More</a>
+        <a href="/experience/" class="btn btn--primary">Learn More</a>
       </div>
 
       <div class="experience-card">
@@ -113,7 +113,7 @@ classes: wide
         <h3>COVID-19 Analytics</h3>
         <p class="experience-location">Personal Project</p>
         <p class="experience-description">Built a system to detect changes in COVID-19 growth rates using public data. Focus on data analysis and visualization.</p>
-        <a href="/projects/" class="read-more-btn">Learn More</a>
+        <a href="/projects/" class="btn btn--primary">Learn More</a>
       </div>
 
       <div class="experience-card">
@@ -123,7 +123,7 @@ classes: wide
         <h3>Mysticeti Protocol</h3>
         <p class="experience-location">Research Project</p>
         <p class="experience-description">Developed a dual DAG protocol for improved blockchain scalability. Focus on distributed systems and consensus mechanisms.</p>
-        <a href="/projects/" class="read-more-btn">Learn More</a>
+        <a href="/projects/" class="btn btn--primary">Learn More</a>
       </div>
     </div>
   </div>
@@ -150,13 +150,13 @@ classes: wide
 .profile-title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #2c3e50;
+  color: #e2e8f0;
 }
 
 .profile-description {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #34495e;
+  color: #cbd5e0;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -169,18 +169,19 @@ classes: wide
 }
 
 .highlight-box {
-  background: #f8f9fa;
+  background: #2d3748;
   padding: 1rem 2rem;
   border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border: 1px solid #4a5568;
 }
 
 .highlight-box i {
   font-size: 1.5rem;
-  color: #3498db;
+  color: #63b3ed;
 }
 
 .skills-grid {
@@ -191,14 +192,15 @@ classes: wide
 }
 
 .skill-category {
-  background: #fff;
+  background: #2d3748;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border: 1px solid #4a5568;
 }
 
 .skill-category h3 {
-  color: #2c3e50;
+  color: #e2e8f0;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
 }
@@ -213,18 +215,24 @@ classes: wide
   align-items: center;
   gap: 1rem;
   padding: 0.8rem;
-  background: #f8f9fa;
+  background: #1a202c;
   border-radius: 6px;
   transition: transform 0.2s;
+  border: 1px solid #4a5568;
 }
 
 .skill-item:hover {
   transform: translateX(5px);
+  background: #2d3748;
 }
 
 .skill-item i {
   font-size: 1.2rem;
-  color: #3498db;
+  color: #63b3ed;
+}
+
+.skill-item span {
+  color: #cbd5e0;
 }
 
 .experience-grid {
@@ -235,64 +243,52 @@ classes: wide
 }
 
 .experience-card {
-  background: #fff;
+  background: #2d3748;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   text-align: center;
   transition: transform 0.2s;
+  border: 1px solid #4a5568;
 }
 
 .experience-card:hover {
   transform: translateY(-5px);
+  background: #1a202c;
 }
 
 .experience-icon {
   font-size: 2.5rem;
-  color: #3498db;
+  color: #63b3ed;
   margin-bottom: 1rem;
 }
 
 .experience-card h3 {
-  color: #2c3e50;
+  color: #e2e8f0;
   margin-bottom: 0.5rem;
 }
 
 .experience-location {
-  color: #7f8c8d;
+  color: #a0aec0;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
 .experience-description {
-  color: #34495e;
+  color: #cbd5e0;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-.read-more-btn {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  background: #3498db;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.2s;
-}
-
-.read-more-btn:hover {
-  background: #2980b9;
-}
-
 .section-divider {
   border: none;
-  border-top: 2px solid #eee;
+  border-top: 2px solid #4a5568;
   margin: 3rem 0;
 }
 
 .section-title {
   text-align: center;
-  color: #2c3e50;
+  color: #e2e8f0;
   font-size: 2rem;
   margin-bottom: 2rem;
 }
