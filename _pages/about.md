@@ -284,13 +284,13 @@ classes: wide
 }
 
 .skill-item:hover {
-  transform: translateX(-5px);
+  transform: translateX(5px);
   background: #2d3748;
 }
 
 /* Right column hover direction */
 .skill-category:last-child .skill-item:hover {
-  transform: translateX(5px);
+  transform: translateX(-5px);
 }
 
 .skill-item i {
