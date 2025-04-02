@@ -46,7 +46,6 @@ classes: wide
                 <li>Spring Framework</li>
                 <li>JUnit Testing</li>
                 <li>Object-Oriented Design</li>
-                <li>Concurrent Programming</li>
               </ul>
             </div>
           </div>
@@ -58,7 +57,6 @@ classes: wide
                 <li>Data Analysis</li>
                 <li>Machine Learning</li>
                 <li>Web Development</li>
-                <li>Scripting</li>
               </ul>
             </div>
           </div>
@@ -70,7 +68,6 @@ classes: wide
                 <li>React.js</li>
                 <li>Node.js</li>
                 <li>TypeScript</li>
-                <li>Frontend Development</li>
               </ul>
             </div>
           </div>
@@ -82,7 +79,6 @@ classes: wide
                 <li>System Programming</li>
                 <li>Memory Management</li>
                 <li>Embedded Systems</li>
-                <li>Performance Optimization</li>
               </ul>
             </div>
           </div>
@@ -100,7 +96,6 @@ classes: wide
                 <li>Public Key Infrastructure</li>
                 <li>Hash Functions</li>
                 <li>Blockchain Security</li>
-                <li>Zero-Knowledge Proofs</li>
               </ul>
             </div>
           </div>
@@ -112,7 +107,6 @@ classes: wide
                 <li>Consensus Algorithms</li>
                 <li>System Architecture</li>
                 <li>Network Protocols</li>
-                <li>Scalability</li>
               </ul>
             </div>
           </div>
@@ -124,7 +118,6 @@ classes: wide
                 <li>Neural Networks</li>
                 <li>Data Mining</li>
                 <li>Pattern Recognition</li>
-                <li>Statistical Analysis</li>
               </ul>
             </div>
           </div>
@@ -136,7 +129,6 @@ classes: wide
                 <li>Network Security</li>
                 <li>Penetration Testing</li>
                 <li>Security Protocols</li>
-                <li>Risk Assessment</li>
               </ul>
             </div>
           </div>
@@ -309,18 +301,23 @@ classes: wide
   display: none;
   position: absolute;
   left: 100%;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   background: #2d3748;
   border: 1px solid #4a5568;
   border-radius: 6px;
-  padding: 1rem;
-  min-width: 200px;
+  padding: 0.8rem;
+  min-width: 180px;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .skill-item:hover .skill-details {
   display: block;
+  opacity: 1;
 }
 
 .skill-details ul {
@@ -331,8 +328,9 @@ classes: wide
 
 .skill-details li {
   color: #cbd5e0;
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
   border-bottom: 1px solid #4a5568;
+  font-size: 0.9rem;
 }
 
 .skill-details li:last-child {
@@ -409,8 +407,10 @@ classes: wide
 
   .skill-details {
     position: static;
+    transform: none;
     margin-top: 0.5rem;
     width: 100%;
+    opacity: 1;
   }
 }
 </style>
