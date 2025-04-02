@@ -363,7 +363,7 @@ classes: wide
 
 .experience-card {
   background: #2d3748;
-  padding: 2rem;
+  padding: 0 2rem 2rem;;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   text-align: center;
