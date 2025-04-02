@@ -41,6 +41,10 @@ classes: wide
   }
 
   .post-card__content {
+    padding: 0.5rem 1rem;
+  }
+
+  .post-card__content--with-image {
     padding: 1rem;
   }
 
@@ -173,7 +177,10 @@ classes: wide
       <div class="posts__grid">
         {% for post in posts %}
           <article class="post-card {% if forloop.index > 4 %}hidden{% endif %} {% if forloop.index > 4 and forloop.index <= 8 %}fade-in{% endif %}">
-            <div class="post-card__content">
+            {% if post.header.image %}
+              <img class="post-card__image" src="{{ post.header.image | relative_url }}" alt="{{ post.title }}">
+            {% endif %}
+            <div class="post-card__content {% if post.header.image %}post-card__content--with-image{% endif %}">
               <h3 class="post-card__title">
                 <a href="{{ post.url | relative_url }}" style="color: inherit; text-decoration: none;">{{ post.title }}</a>
               </h3>

@@ -230,7 +230,7 @@ classes: wide
 
 .highlight-box {
   background: #2d3748;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -253,7 +253,7 @@ classes: wide
 
 .skill-category {
   background: #2d3748;
-  padding: 2rem;
+  padding: 1rem 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   border: 1px solid #4a5568;
@@ -274,7 +274,7 @@ classes: wide
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.8rem;
+  padding: 0.5rem 0.8rem;
   background: #1a202c;
   border-radius: 6px;
   transition: transform 0.2s;
@@ -358,7 +358,7 @@ classes: wide
 
 .experience-card {
   background: #2d3748;
-  padding: 2rem;
+  padding: 1rem 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   text-align: center;
