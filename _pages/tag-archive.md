@@ -189,7 +189,11 @@ classes: wide
       <p class="experience__date">May 2023 - Dec 2023</p>
       <div class="experience__description">
         <p>As a Full-stack Developer at NorthsouthUX, my primary responsibility involves transforming Figma design specifications into fully functional websites, ensuring the accurate implementation of visual concepts while maintaining optimal user experience standards.</p>
-        <p>Example project: <a href="https://www.scuolaguidalugano.ch/" target="_blank">Scuola Guida Lugano</a></p>
+        <p class="experience__projects">
+          <strong>Example projects:</strong>
+          <a href="https://www.scuolaguidalugano.ch/" target="_blank" class="project-link">Scuola Guida Lugano</a> | 
+          <a href="https://softwaregestionale-ch.vercel.app/" target="_blank" class="project-link">Software Gestionale CH</a>
+        </p>
       </div>
       <div class="academic-institution__skills">
         <h3 class="skills-title">Skills Applied</h3>
