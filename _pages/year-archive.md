@@ -9,12 +9,12 @@ classes: wide
   .academics {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem 2rem;
+    padding: 2rem;
   }
   
   .academic-institution {
     background: #2d3748;
-    padding: 0 2rem 2rem;
+    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     border: 1px solid #4a5568;

@@ -41,7 +41,7 @@ classes: wide
   }
 
   .post-card__content {
-    padding: 0 2rem 2rem;
+    padding: 0.5rem 1rem;
   }
 
   .post-card__content--with-image {
@@ -94,7 +94,7 @@ classes: wide
   .category-section {
     margin-bottom: 2rem;
     background: #1a202c;
-    padding: 0 2rem 2rem;
+    padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
