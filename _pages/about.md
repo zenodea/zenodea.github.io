@@ -41,18 +41,50 @@ classes: wide
           <div class="skill-item">
             <i class="fab fa-java"></i>
             <span>Java</span>
+            <div class="skill-details">
+              <ul>
+                <li>Spring Framework</li>
+                <li>JUnit Testing</li>
+                <li>Object-Oriented Design</li>
+                <li>Concurrent Programming</li>
+              </ul>
+            </div>
           </div>
           <div class="skill-item">
             <i class="fab fa-python"></i>
             <span>Python</span>
+            <div class="skill-details">
+              <ul>
+                <li>Data Analysis</li>
+                <li>Machine Learning</li>
+                <li>Web Development</li>
+                <li>Scripting</li>
+              </ul>
+            </div>
           </div>
           <div class="skill-item">
             <i class="fab fa-js"></i>
             <span>JavaScript</span>
+            <div class="skill-details">
+              <ul>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>TypeScript</li>
+                <li>Frontend Development</li>
+              </ul>
+            </div>
           </div>
           <div class="skill-item">
             <i class="fas fa-microchip"></i>
             <span>C</span>
+            <div class="skill-details">
+              <ul>
+                <li>System Programming</li>
+                <li>Memory Management</li>
+                <li>Embedded Systems</li>
+                <li>Performance Optimization</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -63,18 +95,50 @@ classes: wide
           <div class="skill-item">
             <i class="fas fa-lock"></i>
             <span>Cryptography</span>
+            <div class="skill-details">
+              <ul>
+                <li>Public Key Infrastructure</li>
+                <li>Hash Functions</li>
+                <li>Blockchain Security</li>
+                <li>Zero-Knowledge Proofs</li>
+              </ul>
+            </div>
           </div>
           <div class="skill-item">
             <i class="fas fa-database"></i>
             <span>Distributed Systems</span>
+            <div class="skill-details">
+              <ul>
+                <li>Consensus Algorithms</li>
+                <li>System Architecture</li>
+                <li>Network Protocols</li>
+                <li>Scalability</li>
+              </ul>
+            </div>
           </div>
           <div class="skill-item">
             <i class="fas fa-robot"></i>
             <span>Machine Learning</span>
+            <div class="skill-details">
+              <ul>
+                <li>Neural Networks</li>
+                <li>Data Mining</li>
+                <li>Pattern Recognition</li>
+                <li>Statistical Analysis</li>
+              </ul>
+            </div>
           </div>
           <div class="skill-item">
             <i class="fas fa-shield-alt"></i>
             <span>Security</span>
+            <div class="skill-details">
+              <ul>
+                <li>Network Security</li>
+                <li>Penetration Testing</li>
+                <li>Security Protocols</li>
+                <li>Risk Assessment</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -223,6 +287,8 @@ classes: wide
   border-radius: 6px;
   transition: transform 0.2s;
   border: 1px solid #4a5568;
+  cursor: pointer;
+  position: relative;
 }
 
 .skill-item:hover {
@@ -237,6 +303,40 @@ classes: wide
 
 .skill-item span {
   color: #cbd5e0;
+}
+
+.skill-details {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: 6px;
+  padding: 1rem;
+  min-width: 200px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item:hover .skill-details {
+  display: block;
+}
+
+.skill-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-details li {
+  color: #cbd5e0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #4a5568;
+}
+
+.skill-details li:last-child {
+  border-bottom: none;
 }
 
 .experience-grid {
@@ -305,6 +405,12 @@ classes: wide
   .highlight-box {
     width: 100%;
     max-width: 300px;
+  }
+
+  .skill-details {
+    position: static;
+    margin-top: 0.5rem;
+    width: 100%;
   }
 }
 </style>
