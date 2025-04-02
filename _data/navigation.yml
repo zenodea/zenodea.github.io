@@ -7,3 +7,5 @@ main:
     url: /academics/
   - title: "Experience"
     url: /experience/
+  - title: "Contact Me"
+    url: /contact/

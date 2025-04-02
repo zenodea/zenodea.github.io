@@ -524,24 +524,19 @@ classes: wide
 
   <div class="blog-preview-section">
     <h2 class="section-title">Latest Blog Posts</h2>
-    <div class="posts__grid">
+    <div class="blog-grid">
       {% for post in site.posts limit:2 %}
-        <article class="post-card">
-          {% if post.header.image %}
-            <img class="post-card__image" src="{{ post.header.image | relative_url }}" alt="{{ post.title }}">
-          {% endif %}
-          <div class="post-card__content {% if post.header.image %}post-card__content--with-image{% endif %}">
-            <h3 class="post-card__title">
-              <a href="{{ post.url | relative_url }}" style="color: inherit; text-decoration: none;">{{ post.title }}</a>
-            </h3>
-            <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-            <div class="post-card__meta">
-              <span><i class="far fa-calendar"></i>{{ post.date | date: "%B %d, %Y" }}</span>
-            </div>
-            <br>
-            <div class="post-card__category">{{ post.categories | first }}</div>
+        <div class="blog-card">
+          <h3>{{ post.title }}</h3>
+          <div class="blog-date">
+            <i class="far fa-calendar"></i> {{ post.date | date: "%B %d, %Y" }}
           </div>
-        </article>
+          <p class="blog-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          <div class="project-tags">
+            <span class="project-tag">{{ post.categories | first }}</span>
+          </div>
+          <a href="{{ post.url | relative_url }}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
       {% endfor %}
     </div>
   </div>
