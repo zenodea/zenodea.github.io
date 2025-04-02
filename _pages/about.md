@@ -300,9 +300,6 @@ classes: wide
 .skill-details {
   display: none;
   position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
   background: #2d3748;
   border: 1px solid #4a5568;
   border-radius: 6px;
@@ -310,9 +307,24 @@ classes: wide
   min-width: 180px;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  margin-left: 0.5rem;
   opacity: 0;
   transition: opacity 0.2s ease;
+}
+
+/* Left column dropdowns */
+.skill-category:first-child .skill-details {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 0.5rem;
+}
+
+/* Right column dropdowns */
+.skill-category:last-child .skill-details {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.5rem;
 }
 
 .skill-item:hover .skill-details {
@@ -405,12 +417,9 @@ classes: wide
     max-width: 300px;
   }
 
+  /* Disable dropdowns on mobile */
   .skill-details {
-    position: static;
-    transform: none;
-    margin-top: 0.5rem;
-    width: 100%;
-    opacity: 1;
+    display: none !important;
   }
 }
 </style>
