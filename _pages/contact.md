@@ -163,9 +163,9 @@ h3
       <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
       <div class="contact-info">
         <p>Based in:</p>
-        <p>Your City, Country</p>
-        <p>Time Zone: Your Time Zone</p>
-        <p>Open to remote work opportunities worldwide.</p>
+        <p>London, United Kingdom</p>
+        <p>Time Zone: GMT+1</p>
+        <p>Open to remote work.</p>
       </div>
     </div>
 
@@ -173,9 +173,7 @@ h3
       <h3><i class="fas fa-calendar-check"></i> Response Time</h3>
       <div class="contact-info">
         <p>Professional Inquiries:</p>
-        <p>• Within 24-48 hours</p>
-        <p>• Business hours (Your Time Zone)</p>
-        <p>• Weekdays preferred</p>
+        <p>• Within 24 hours</p>
       </div>
     </div>
   </div>
