@@ -253,7 +253,7 @@ classes: wide
 
 .skill-category {
   background: #2d3748;
-  padding: 2rem;
+  padding: 0rem 2rem 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   border: 1px solid #4a5568;
