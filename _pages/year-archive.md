@@ -28,8 +28,11 @@ classes: wide
   }
   
   .academic-institution__logo {
-    width: 200px;
-    height: 200px;
+    min-width: 154px;
+    min-height: 154px;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1;
     margin-right: 1.5rem;
     display: flex;
     align-items: center;

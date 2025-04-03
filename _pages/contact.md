@@ -110,6 +110,11 @@ classes: wide
       padding: 1rem;
     }
   }
+
+h3
+{
+  margin-top:0;
+}
 </style>
 
 <div class="contact-section">
@@ -132,7 +137,7 @@ classes: wide
       <h3><i class="fab fa-linkedin"></i> LinkedIn</h3>
       <div class="contact-info">
         <p>Connect with me professionally:</p>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+        <a href="https://www.linkedin.com/in/zeno-de-angeli/" target="_blank">https://www.linkedin.com/in/zeno-de-angeli/</a>
         <p>View my professional experience and recommendations.</p>
       </div>
     </div>
@@ -141,7 +146,7 @@ classes: wide
       <h3><i class="fab fa-github"></i> GitHub</h3>
       <div class="contact-info">
         <p>Check out my code:</p>
-        <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+        <a href="https://github.com/hazumino" target="_blank">github.com/hazumino</a>
         <p>Explore my projects and contributions.</p>
       </div>
     </div>
@@ -151,10 +156,6 @@ classes: wide
       <div class="contact-info">
         <p>Current Status:</p>
         <span class="availability-status available">Open to Opportunities</span>
-        <div class="preferred-contact">
-          <h4>Preferred Contact Method</h4>
-          <p>Email is the most reliable way to reach me. I check my inbox regularly and respond promptly to professional inquiries.</p>
-        </div>
       </div>
     </div>
 
