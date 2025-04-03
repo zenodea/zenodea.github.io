@@ -20,11 +20,11 @@ classes: wide
         </div>
         <div class="highlight-box">
           <i class="fas fa-code"></i>
-          <span>Software Development</span>
+          <span>BSc Computer Science</span>
         </div>
         <div class="highlight-box">
-          <i class="fas fa-shield-alt"></i>
-          <span>Security Research</span>
+          <i class="fas fa-project-diagram"></i>
+          <span>Distributed Systems Research</span>
         </div>
       </div>
     </div>
@@ -157,7 +157,7 @@ classes: wide
           <i class="fas fa-flask"></i>
         </div>
         <h3>Research Assistant</h3>
-        <p class="experience-location">UCL</p>
+        <p class="experience-location">University of Sussex</p>
         <p class="experience-description">Working on novel technologies and methodologies in security research. Quick adaptation to new tools and frameworks.</p>
         <a href="/experience/" class="btn btn--primary">Learn More</a>
       </div>
@@ -167,9 +167,9 @@ classes: wide
           <i class="fas fa-chart-line"></i>
         </div>
         <h3>COVID-19 Analytics</h3>
-        <p class="experience-location">Personal Project</p>
+        <p class="experience-location">Research Project</p>
         <p class="experience-description">Built a system to detect changes in COVID-19 growth rates using public data. Focus on data analysis and visualization.</p>
-        <a href="/projects/" class="btn btn--primary">Learn More</a>
+        <a href="https://github.com/Hazumino/dissertation" class="btn btn--primary">Learn More</a>
       </div>
 
       <div class="experience-card">
@@ -179,7 +179,7 @@ classes: wide
         <h3>Mysticeti Protocol</h3>
         <p class="experience-location">Research Project</p>
         <p class="experience-description">Developed a dual DAG protocol for improved blockchain scalability. Focus on distributed systems and consensus mechanisms.</p>
-        <a href="/projects/" class="btn btn--primary">Learn More</a>
+        <a href="https://github.com/Hazumino/dual-mode-consensus" class="btn btn--primary">Learn More</a>
       </div>
     </div>
   </div>
@@ -253,7 +253,7 @@ classes: wide
 
 .skill-category {
   background: #2d3748;
-  padding: 0rem 2rem 2rem;
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   border: 1px solid #4a5568;
@@ -263,6 +263,7 @@ classes: wide
   color: #e2e8f0;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+  margin-top: 0cm;
 }
 
 .skills-list {

@@ -104,6 +104,7 @@ classes: wide
     font-size: 1.8rem;
     margin-bottom: 1rem;
     text-align: center;
+    margin-top:0;
   }
 
   .category-description {
