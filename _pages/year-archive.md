@@ -192,7 +192,7 @@ classes: wide
         <img src="/assets/images/tasislogo.png" alt="TASIS Logo">
       </div>
       <div class="academic-institution__title-container">
-        <h2 class="academic-institution__title" style="font-size: 1.5rem;">The American School in Switzerland</h2>
+        <h2 class="academic-institution__title" style="font-size: 1.4rem;">The American School in Switzerland</h2>
         <p class="academic-institution__degree"><strong>International Baccalaureate</strong></p>
         <p class="academic-institution__date">2017 - 2019</p>
       </div>
