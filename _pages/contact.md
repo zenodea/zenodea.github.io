@@ -137,7 +137,7 @@ h3
       <h3><i class="fab fa-linkedin"></i> LinkedIn</h3>
       <div class="contact-info">
         <p>Connect with me professionally:</p>
-        <a href="https://www.linkedin.com/in/zeno-de-angeli/" target="_blank">https://www.linkedin.com/in/zeno-de-angeli/</a>
+        <a href="https://www.linkedin.com/in/zeno-de-angeli/" target="_blank">linkedin.com/in/zeno-de-angeli/</a>
         <p>View my professional experience and recommendations.</p>
       </div>
     </div>
