@@ -19,7 +19,7 @@ classes: wide
           <span>MSc Information Security</span>
         </div>
         <div class="highlight-box">
-          <i class="fas fa-code"></i>
+          <i class="fas fa-graduation-cap"></i>
           <span>BSc Computer Science</span>
         </div>
         <div class="highlight-box">
