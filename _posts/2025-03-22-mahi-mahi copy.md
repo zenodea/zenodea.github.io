@@ -39,8 +39,9 @@ The term uncertified DAG-Based consensus protocol was first coined by the Mystic
 Cordial Miners instead realises that certificates can be implicitly viewed within the DAG structure. It's better to understand this via graphical representations. First of all, let's look at a DAG representation of Bullshark:
 
 <div class="svg-container">
-<img src="{{ site.baseurl }}/assets/graphs/main.svg" alt="Description" class="responsive-svg inverted">
+<img src="{{ site.baseurl }}/assets/graphs/cordial_miners/bullshark_commit_rule.svg" alt="Description" class="responsive-svg">
 </div>
+
 
 Here, we can see how leader block $L_0$ gets skipped, due to having less then $f+1$ votes, however $L_1$, the block proposed from the leader of $r+2$ has enough support to be committed, alongside its causal history. This means that all of $L_1$'s referenced DAG will be included in the commitment, and, for those unaware, the block will look for an uncommitted leader block in its causal history ($L_0$), and if a path exists, the found leader block, alongisde its causal history, will be committed first. Thus, intuitively, we can see how a proposed block has a $2-$message delay (i.e. we need $2$ rounds to commit the block), HOWEVER, we have to remember that Bullshark utilises certified blocks. Meaning that it actually takes a $6-$message delay to commit a block, since, for every block the following happens:
 - Message 1: Validator $v$ shares blocks with the rest of the validators
@@ -50,8 +51,9 @@ Here, we can see how leader block $L_0$ gets skipped, due to having less then $f
 Now, let us see how Cordial Miners commits a leader block:
 
 <div class="svg-container">
-<img src="{{ site.baseurl }}/assets/graphs/cordial_miners/bullshark_commit_rule.svg" alt="Description" class="responsive-svg">
+<img src="{{ site.baseurl }}/assets/graphs/main.svg" alt="Description" class="responsive-svg inverted">
 </div>
+
 
 We can see that Cordial Miners requires a $3-$message delay to propose a block. Intutively this is because:
 
