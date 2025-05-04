@@ -32,7 +32,22 @@ This write-up marks the beginning of my series on Directed Acyclic Graph (DAG) b
 ## Uncertified DAG-Based Consensus Protocols
 The term uncertified DAG-Based consensus protocol was first coined by the Mysticeti protocol, but it applies very well to Cordial Miners as well. Usually, blocks proposed by validators need to be certified, meaning that $2f+1$ validators require to validate and sign the block. Protocols that utilise Narhwal, for example, for transaction dissemination utilise certified blocks. In theory, this is good for a couple of reasons: Bullshark only requires a 2-message delay to commit a leader block and **equivocation** is simply not possible with certified blocks. Blocks will not receive the $2f+1$ votes required to certify a block due to **quorum intersection**, a fancy way to say that two validators will always have at least one validator in common. Cordial Miners instead realises that certificates can be implicitly viewed within the DAG structure. It's better to understand this via graphical representations:
 <script type="text/tikz">
-\begin{tikzpicture}
+\begin{tikzpicture}[
+    node distance=1.5cm and 2.5cm,
+    validator/.style={circle, draw, minimum size=0.8cm},
+    propose/.style={validator, thick},
+    boost/.style={validator, draw=black},
+    vote/.style={validator, draw=orange, thick},
+    certify/.style={validator, draw=green!60!black, thick},
+    supporting_validator/.style={validator, fill=green!20},
+    support/.style={->, green!60!black, thick},
+    >=Stealth,
+    leader/.style={validator, fill=green!20},
+    vote_support/.style={->, orange, thick},
+    cert_support/.style={->, green!60!black, thick},
+    >=Stealth
+]
+
 % Round labels
 \node at (0, 5.5) {$r$};
 \node at (2.5, 5.5) {$r+1$};
@@ -95,6 +110,7 @@ The term uncertified DAG-Based consensus protocol was first coined by the Mystic
 \draw[->] (v3r2) -- (v1r1);
 \draw[->] (v3r2) -- (v2r1);
 \draw[->] (v3r2) -- (v3r1);
+
 \end{tikzpicture}
 </script>
 
