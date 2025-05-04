@@ -32,9 +32,89 @@ This write-up marks the beginning of my series on Directed Acyclic Graph (DAG) b
 ## Uncertified DAG-Based Consensus Protocols
 The term uncertified DAG-Based consensus protocol was first coined by the Mysticeti protocol, but it applies very well to Cordial Miners as well. Usually, blocks proposed by validators need to be certified, meaning that $2f+1$ validators require to validate and sign the block. Protocols that utilise Narhwal, for example, for transaction dissemination utilise certified blocks. In theory, this is good for a couple of reasons: Bullshark only requires a 2-message delay to commit a leader block and **equivocation** is simply not possible with certified blocks. Blocks will not receive the $2f+1$ votes required to certify a block due to **quorum intersection**, a fancy way to say that two validators will always have at least one validator in common. Cordial Miners instead realises that certificates can be implicitly viewed within the DAG structure. It's better to understand this via graphical representations:
 <script type="text/tikz">
-  \begin{tikzpicture}
-    \draw (0,0) circle (1in);
-  \end{tikzpicture}
+\begin{tikzpicture}[
+    node distance=1.5cm and 2.5cm,
+    validator/.style={circle, draw, minimum size=0.8cm},
+    propose/.style={validator, thick},
+    boost/.style={validator, draw=black},
+    vote/.style={validator, draw=orange, thick},
+    certify/.style={validator, draw=green!60!black, thick},
+    supporting_validator/.style={validator, fill=green!20},
+    support/.style={->, green!60!black, thick},
+    >=Stealth,
+    leader/.style={validator, fill=green!20},
+    vote_support/.style={->, orange, thick},
+    cert_support/.style={->, green!60!black, thick},
+    >=Stealth
+]
+
+% Round labels
+\node at (0, 5.5) {$r$};
+\node at (2.5, 5.5) {$r+1$};
+\node at (5, 5.5) {$r+2$};
+% Wave labels
+% Validator labels
+\node at (-1.5, 4) {$v_0$};
+\node at (-1.5, 3) {$v_1$};
+\node at (-1.5, 2) {$v_2$};
+\node at (-1.5, 1) {$v_3$};
+
+% Round R validators (Propose)
+\node[propose] (v0r) at (0, 4) {};
+\node[propose] (v1r) at (0, 3) {};
+\node[propose] (v2r) at (0, 2) {};
+\node[propose] (v3r) at (0, 1) {};
+
+% Round R+1 validators (Boost)
+\node[propose] (v0r1) at (2.5, 4) {};
+\node[propose] (v1r1) at (2.5, 3) {};
+\node[propose] (v2r1) at (2.5, 2) {};
+\node[propose] (v3r1) at (2.5, 1) {};
+
+% Round R+2 validators (Boost)
+\node[propose] (v0r2) at (5, 4) {};
+\node[propose] (v1r2) at (5, 3) {};
+\node[propose] (v2r2) at (5, 2) {};
+\node[propose] (v3r2) at (5, 1) {};
+
+% Connections from Boost-1 to Propose (represent references)
+\draw[->] (v0r1) -- (v0r);
+\draw[->] (v0r1) -- (v1r);
+\draw[->] (v0r1) -- (v2r);
+
+\draw[->] (v1r1) -- (v0r);
+\draw[->] (v1r1) -- (v1r);
+\draw[->] (v1r1) -- (v2r);
+
+\draw[->] (v2r1) -- (v0r);
+\draw[->] (v2r1) -- (v1r);
+\draw[->] (v2r1) -- (v2r);
+
+\draw[->] (v3r1) -- (v0r);
+\draw[->] (v3r1) -- (v1r);
+\draw[->] (v3r1) -- (v3r);
+
+% Connections from Boost-2 to Boost-1
+\draw[->] (v0r2) -- (v0r1);
+\draw[->] (v0r2) -- (v1r1);
+\draw[->] (v0r2) -- (v2r1);
+
+\draw[->] (v1r2) -- (v0r1);
+\draw[->] (v1r2) -- (v1r1);
+\draw[->] (v1r2) -- (v2r1);
+
+\draw[->] (v2r2) -- (v0r1);
+\draw[->] (v2r2) -- (v1r1);
+\draw[->] (v2r2) -- (v2r1);
+
+\draw[->] (v3r2) -- (v1r1);
+\draw[->] (v3r2) -- (v2r1);
+\draw[->] (v3r2) -- (v3r1);
+
+% Wave boundary
+\node[draw, dashed, rounded corners, fit=(v0r) (v3r) (v0r2) (v3r2), inner sep=8pt, label={[align=center]above:Wave}] {};
+
+\end{tikzpicture}
 </script>
 
 
