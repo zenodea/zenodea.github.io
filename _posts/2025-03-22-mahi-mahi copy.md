@@ -35,10 +35,9 @@ The term uncertified DAG-Based consensus protocol was first coined by the Mystic
 **Quorum Intersection** : A fancy way to say that two validators will always have at least one validator in common. 
 
 Cordial Miners instead realises that certificates can be implicitly viewed within the DAG structure. It's better to understand this via graphical representations:
-<img src="<img src="{{ site.baseurl }}/assets/graphs/main.svg" alt="Description of the SVG" width="300" height="200">
 
 <div class="svg-container">
-<img src="<img src="{{ site.baseurl }}/assets/graphs/main.svg" alt="Description" class="responsive-svg inverted">
+<img src="{{ site.baseurl }}/assets/graphs/main.svg" alt="Description" class="responsive-svg inverted">
 </div>
 
 <style>
