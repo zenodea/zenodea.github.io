@@ -50,7 +50,7 @@ Here, we can see how leader block $L_0$ gets skipped, due to having less then $f
 Now, let us see how Cordial Miners commits a leader block:
 
 <div class="svg-container">
-<img src="{{ site.baseurl }}/assets/graphs/cordial_miners/bullshark_commit_rule.svg" alt="Description" class="responsive-svg inverted">
+<img src="{{ site.baseurl }}/assets/graphs/cordial_miners/bullshark_commit_rule.svg" alt="Description" class="responsive-svg">
 </div>
 
 We can see that Cordial Miners requires a $3-$message delay to propose a block. Intutively this is because:
