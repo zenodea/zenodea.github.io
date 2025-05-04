@@ -31,7 +31,7 @@ This write-up marks the beginning of my series on Directed Acyclic Graph (DAG) b
 
 ## Uncertified DAG-Based Consensus Protocols
 The term uncertified DAG-Based consensus protocol was first coined by the Mysticeti protocol, but it applies very well to Cordial Miners as well. Usually, blocks proposed by validators need to be certified, meaning that $2f+1$ validators require to validate and sign the block. Protocols that utilise Narhwal, for example, for transaction dissemination utilise certified blocks. In theory, this is good for a couple of reasons: Bullshark only requires a 2-message delay to commit a leader block and **equivocation** is simply not possible with certified blocks. Blocks will not receive the $2f+1$ votes required to certify a block due to **quorum intersection**, a fancy way to say that two validators will always have at least one validator in common. Cordial Miners instead realises that certificates can be implicitly viewed within the DAG structure. It's better to understand this via graphical representations:
-![commit_rule](../assets/graphs/main.svg)
+<img src="../assets/graphs/main.svg" alt="Description of the SVG" width="300" height="200">
 
 
 
