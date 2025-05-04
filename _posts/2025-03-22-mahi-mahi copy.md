@@ -70,7 +70,7 @@ Although Cordial Miners takes requires a $3-$message delay to commit a leader bl
   }
   
   .responsive-svg {
-    min-width: 100%;
+    min-width: 70%;
     height: auto;
   }
   
