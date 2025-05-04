@@ -110,10 +110,6 @@ The term uncertified DAG-Based consensus protocol was first coined by the Mystic
 \draw[->] (v3r2) -- (v1r1);
 \draw[->] (v3r2) -- (v2r1);
 \draw[->] (v3r2) -- (v3r1);
-
-% Wave boundary
-\node[draw, dashed, rounded corners, fit=(v0r) (v3r) (v0r2) (v3r2), inner sep=8pt, label={[align=center]above:Wave}] {};
-
 \end{tikzpicture}
 </script>
 
