@@ -68,7 +68,7 @@ Although Cordial Miners takes requires a $3-$message delay to commit a leader bl
 
 
 <style>
-svg [fill="black"], svg [fill="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
+svg [stroke="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
     fill: white !important;
     stroke: white!important;
 
