@@ -31,50 +31,7 @@ This write-up marks the beginning of my series on Directed Acyclic Graph (DAG) b
 
 ## Uncertified DAG-Based Consensus Protocols
 The term uncertified DAG-Based consensus protocol was first coined by the Mysticeti protocol, but it applies very well to Cordial Miners as well. Usually, blocks proposed by validators need to be certified, meaning that $2f+1$ validators require to validate and sign the block. Protocols that utilise Narhwal, for example, for transaction dissemination utilise certified blocks. In theory, this is good for a couple of reasons: Bullshark only requires a 2-message delay to commit a leader block and **equivocation** is simply not possible with certified blocks. Blocks will not receive the $2f+1$ votes required to certify a block due to **quorum intersection**, a fancy way to say that two validators will always have at least one validator in common. Cordial Miners instead realises that certificates can be implicitly viewed within the DAG structure. It's better to understand this via graphical representations:
-<script type="text/tikz">
-\begin{tikzpicture}[
-    node distance=1.5cm and 3cm,
-    validator/.style={circle, draw, minimum size=0.8cm},
-    default_validator/.style={validator, draw=black},
-    highlighted_validator/.style={validator, draw=red, thick},
-    supporting_validator/.style={validator, fill=green!20},
-    skipping_validator/.style={validator, fill=pink!40}
-]
-\node at (0, 5) {Round $r$};
-\node at (3.5, 5) {Round $r+1$};
-\node at (7, 5) {Round $r+2$};
-\node at (-1.5, 4) {$A_0$};
-\node at (-1.5, 3) {$A_1$};
-\node at (-1.5, 2) {$A_2$};
-\node at (-1.5, 1) {$A_3$};
-\node[default_validator] (A0r) at (0, 4) {};
-\node[default_validator] (A1r) at (0, 3) {};
-\node[default_validator] (A2r) at (0, 2) {};
-\node[default_validator] (A3r) at (0, 1) {};
-\node[default_validator] (A0r2) at (7, 4) {};
-\node[default_validator] (A1r2) at (7, 3) {};
-\node[default_validator] (A2r2) at (7, 2) {};
-\node[default_validator] (A3r2) at (7, 1) {};
-\draw[->] (A0r1) -- (A0r);
-\draw[->] (A1r1) -- (A0r);
-\draw[->] (A2r1) -- (A0r);
-\draw[->] (A0r1) -- (A1r);
-\draw[->] (A1r1) -- (A1r);
-\draw[->] (A2r1) -- (A1r);
-\draw[->] (A0r1) -- (A2r);
-\draw[->] (A1r1) -- (A2r);
-\draw[->] (A2r1) -- (A2r);
-\draw[->] (A0r2) -- (A0r1);
-\draw[->] (A1r2) -- (A0r1);
-\draw[->] (A0r2) -- (A1r1);
-\draw[->] (A1r2) -- (A1r1);
-\draw[->] (A1r2) -- (A2r1);
-\draw[->] (A2r2) -- (A2r1);
-\draw[->] (A2r2) -- (A3r1);
-\draw[->] (A3r2) -- (A3r1);
-\end{tikzpicture}
-</script>
-
+![commit_rule](../assets/graphs/main.svg)
 
 
 
