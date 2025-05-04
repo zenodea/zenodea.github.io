@@ -34,11 +34,33 @@ The term uncertified DAG-Based consensus protocol was first coined by the Mystic
 
 **Quorum Intersection** : A fancy way to say that two validators will always have at least one validator in common. 
 
-Cordial Miners instead realises that certificates can be implicitly viewed within the DAG structure. It's better to understand this via graphical representations:
+## Partially Synchronous Version
+
+Cordial Miners instead realises that certificates can be implicitly viewed within the DAG structure. It's better to understand this via graphical representations. First of all, let's look at a DAG representation of Bullshark:
 
 <div class="svg-container">
 <img src="{{ site.baseurl }}/assets/graphs/main.svg" alt="Description" class="responsive-svg inverted">
 </div>
+Here, we can see how leader block $L_0$ gets skipped, due to having less then $f+1$ votes, however $L_1$, the block proposed from the leader of $r+2$ has enough support to be committed, alongside its causal history. This means that all of $L_1$'s referenced DAG will be included in the commitment, and, for those unaware, the block will look for an uncommitted leader block in its causal history ($L_0$), and if a path exists, the found leader block, alongisde its causal history, will be committed first. Thus, intuitively, we can see how a proposed block has a $2-$message delay (i.e. we need $2$ rounds to commit the block), HOWEVER, we have to remember that Bullshark utilises certified blocks. Meaning that it actually takes a $6-$message delay to commit a block, since, for every block the following happens:
+- Message 1: Validator $v$ shares blocks with the rest of the validators
+- Message 2: The validators may sign the block
+- Message 3: If $2f+1$, where n = $3f+1$, have signed the block, a certificate is constructed (**quorum certificate**), and validator $v$ proposes the block
+
+Now, let us see how Cordial Miners commits a leader block:
+<div class="svg-container">
+<img src="{{ site.baseurl }}/assets/graphs/main.svg" alt="Description" class="responsive-svg inverted">
+</div>
+We can see that Cordial Miners requires a $3-$message delay to propose a block. Intutively this is because:
+- Round $r$: Validator $v$ proposes block $L_0$
+- Round $r+1$: $2f+1$ validators include block $L_0$ in their references
+- Round $r+2$: A further $2f+1$ view the $2f+1$ pattern in round $r+1$, confirming the existence of a certificate
+Although Cordial Miners takes requires a $3-$message delay to commit a leader block, compared to the $2-$message delay of Bullshark, Cordial Miners blocks are simply signed by the validator (i.e. only $1-$message delay to propose a block). We can clearly see how much faster this design is compared to Bullshark's "certified" DAG structure.
+
+## Asynchronous Version
+
+
+
+
 
 <style>
   .svg-container {
@@ -48,7 +70,7 @@ Cordial Miners instead realises that certificates can be implicitly viewed withi
   }
   
   .responsive-svg {
-    max-width: 100%;
+    min-width: 100%;
     height: auto;
   }
   
