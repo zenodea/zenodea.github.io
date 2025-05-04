@@ -37,7 +37,26 @@ The term uncertified DAG-Based consensus protocol was first coined by the Mystic
 Cordial Miners instead realises that certificates can be implicitly viewed within the DAG structure. It's better to understand this via graphical representations:
 <img src="<img src="{{ site.baseurl }}/assets/graphs/main.svg" alt="Description of the SVG" width="300" height="200">
 
+<div class="svg-container">
+<img src="<img src="{{ site.baseurl }}/assets/graphs/main.svg" alt="Description" class="responsive-svg inverted">
+</div>
 
+<style>
+  .svg-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .responsive-svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .inverted {
+    filter: invert(100%);
+  }
+</style>
 
 
 
