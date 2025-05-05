@@ -1,6 +1,6 @@
 ---
 title: "Cordial Miners"
-last_modified_at: 2025-03-22T14:30:45+00:00
+last_modified_at: 2025-05-05T14:30:45+00:00
 categories:
   - Write-Ups
 tags:
@@ -27,15 +27,16 @@ tags:
     }
   });
 </script>
-This write-up marks the beginning of my series on Directed Acyclic Graph (DAG) based consensus protocols. My research project has led me to read many consensus protocols, but the one that I wanted to start with was a protocol named Cordial Miners. I have not found many articles on this protocol, rather, most of the popularity has gone into its spiritial successor, Mysticeti-C and Mahi-Mahi. So, I wanted to shed some light on the protocol that allowed those two to come to fruition. Before delving into this write-up, I would reccomend familiarising yourself with DAG-based consenus protocols (Tusk, Bullshark, etc...), as they differ in many ways compared to more traditional blockchains (HotStuff, etc...).
+This write-up marks the beginning of my series on Directed Acyclic Graph (DAG) based consensus protocols. My research project has led me to read many consensus protocols, but the one that I wanted to start with was a protocol named Cordial Miners. I have not found many articles on this protocol, rather, most of the popularity has gone into its "spiritial successor", Mysticeti-C and Mahi-Mahi. So, I wanted to shed some light on the protocol that allowed those two to come to fruition. Before delving into this write-up, I would reccomend familiarising yourself with DAG-based consenus protocols (Tusk, Bullshark, etc...), as they differ in many ways compared to more traditional blockchains (HotStuff, etc...).
 
 ## Uncertified DAG-Based Consensus Protocols
 The term uncertified DAG-Based consensus protocol was first coined by the Mysticeti protocol, but it applies very well to Cordial Miners as well. Usually, blocks proposed by validators need to be certified, meaning that $2f+1$ validators require to validate and sign the block. Protocols that utilise Narhwal, for example, for transaction dissemination utilise certified blocks. In theory, this is good for a couple of reasons: Bullshark only requires a 2-message delay to commit a leader block and **equivocation** is simply not possible with certified blocks. Blocks will not receive the $2f+1$ votes required to certify a block due to **quorum intersection**.
 
 **Quorum Intersection** : A fancy way to say that two validators will always have at least one validator in common. 
 
-## Partially Synchronous Version
+Something very cool about Cordial Miner is that it can be configured for both partially synchronous or asynchronous assumptions. I would recommend reading this [write-up on network models]({% post_url 2025-05-05-network-models %}) to better understand the differences between these network assumptions before proceeding.
 
+## Partially Synchronous Version
 Cordial Miners instead realises that certificates can be implicitly viewed within the DAG structure. It's better to understand this via graphical representations. First of all, let's look at a DAG representation of Bullshark:
 
 <div class="svg-container">
@@ -62,7 +63,6 @@ We can see that Cordial Miners requires a $3-$message delay to propose a block. 
 - Round $r+2$: A further $2f+1$ view the $2f+1$ pattern in round $r+1$, confirming the existence of a certificate
 
 Although Cordial Miners takes requires a $3-$message delay to commit a leader block, compared to the $2-$message delay of Bullshark, Cordial Miners blocks are simply signed by the validator (i.e. only $1-$message delay to propose a block). We can clearly see how much faster this design is compared to Bullshark's "certified" DAG structure.
-
 ## Asynchronous Version
 
 
