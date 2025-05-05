@@ -32,6 +32,7 @@ This write-up marks the beginning of my series on Directed Acyclic Graph (DAG) b
 ## Uncertified DAG-Based Consensus Protocols
 The term uncertified DAG-Based consensus protocol was first coined by the Mysticeti protocol, but it applies very well to Cordial Miners as well. Usually, blocks proposed by validators need to be certified, meaning that $2f+1$ validators require to validate and sign the block. Protocols that utilise Narhwal, for example, for transaction dissemination utilise certified blocks. In theory, this is good for a couple of reasons: Bullshark only requires a 2-message delay to commit a leader block and **equivocation** is simply not possible with certified blocks. Blocks will not receive the $2f+1$ votes required to certify a block due to **quorum intersection**.
 
+
 **Quorum Intersection** : A fancy way to say that two validators will always have at least one validator in common. 
 
 Something very cool about Cordial Miner is that it can be configured for both partially synchronous or asynchronous assumptions. I would recommend reading this [write-up on network models]({% post_url 2025-05-05-network-models %}) to better understand the differences between these network assumptions before proceeding.
@@ -52,11 +53,11 @@ Here, we can see how leader block $L_0$ gets skipped, due to having less then $f
 Now, let us see how Cordial Miners commits a leader block:
 
 <div class="svg-container">
-<img src="{{ site.baseurl }}/assets/graphs/main.svg" alt="Description" class="responsive-svg inverted">
+<img src="{{ site.baseurl }}/assets/graphs/cordial_miners/cordial_miners_commit_rule.svg" alt="Description" class="responsive-svg">
 </div>
 
 
-We can see that Cordial Miners requires a $3-$message delay to propose a block. Intutively this is because:
+We can see that Cordial Miners requires a $3-$message delay to propose a block. Intuitively this is because:
 
 - Round $r$: Validator $v$ proposes block $L_0$
 - Round $r+1$: $2f+1$ validators include block $L_0$ in their references
