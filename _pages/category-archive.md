@@ -172,7 +172,6 @@ classes: wide
           {% when 'Personal' %}
             Personal insights, experiences, and thoughts on various topics.
           {% else %}
-            Articles and insights about {{ category }}.
         {% endcase %}
       </p>
       <div class="posts__grid">
