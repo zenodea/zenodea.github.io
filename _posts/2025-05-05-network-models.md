@@ -48,11 +48,25 @@ Generally, consensus protocols require two properties to be achieved to be funct
 
 **Asynchrony**: Messages from honest participants will **eventually** be delivered. The eventually is really important here, as we are making no assumption on how long the message will take to arrive. 
 
-We mostly care about **partial synchrony** and **asynchrony** The differences between the two models can be a little deceiving, but the most important part is how a protocol handles delayed messages. For example, protocols that uses partially synchronous assumptions can utilise **timeouts**. We know that messages, after $GST$, will be received after $\Delta$, thus if a message is taking longer then expect, we can simply skip it. HOWEVER, we cannot do this for asynchronous settings, as we are making no assumption on the max amount time for a message to arrive. Did the process (i.e. the node) crash? or is the network simply slow? 
+We mostly care about **partial synchrony** and **asynchrony** The differences between the two models can be a little deceiving, but the most important part is how a protocol handles delayed messages. For example, protocols that uses partially synchronous assumptions can utilise **timeouts**. We know that messages, after $GST$, will be received after $\Delta$, thus if a message is taking longer then expect, we can simply skip it. HOWEVER, we cannot do this for asynchronous settings, as we are making making the assumptions that, eventually, messages will arrive. 
+
+**Did the process (i.e. the node) crash? Is the network congested? or, is the process acting malicious?**
+
+
 
 ## Partial Synchrony
 I will now provide two small examples where timeouts are implemented. This section may require a little bit of background knowledge
 
+<div class="svg-container">
+<img src="{{ site.baseurl }}/assets/graphs/network_model/partial_synchrony.svg" alt="Example partial synchrony" class="responsive-svg">
+</div>
+<br/>
+
+## Asynchrony
+<div class="svg-container">
+<img src="{{ site.baseurl }}/assets/graphs/network_model/asynchrony.svg" alt="Example partial synchrony" class="responsive-svg">
+</div>
+<br/>
 
 <style>
 svg [stroke="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
