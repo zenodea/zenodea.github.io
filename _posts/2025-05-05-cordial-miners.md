@@ -2,10 +2,7 @@
 title: "Cordial Miners"
 last_modified_at: 2025-05-05T14:30:45+00:00
 categories:
-  - Distributed Systems 
-tags:
-  - Cryptocurrencies
-  - Consensus
+  - Consensus Protocols 
 ---
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">

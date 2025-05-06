@@ -1,11 +1,7 @@
 main:
-  - title: "Posts"
+  - title: "All Articles"
     url: /posts/
-  - title: "About"
-    url: /about/
-  - title: "Academics"
+  - title: "Education"
     url: /academics/
   - title: "Experience"
     url: /experience/
-  - title: "Contact Me"
-    url: /contact/

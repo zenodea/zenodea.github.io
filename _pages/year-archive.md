@@ -1,5 +1,5 @@
 ---
-title: "Academics"
+title: "Education"
 permalink: /academics/
 layout: single
 author_profile: true
