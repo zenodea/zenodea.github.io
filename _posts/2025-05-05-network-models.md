@@ -2,9 +2,8 @@
 title: "Network Models"
 last_modified_at: 2025-05-05T14:30:45+00:00
 categories:
-  - Write-Up 
-tags:
   - Distributed Systems 
+tags:
   - Consensus Protocols
   - Network Models
 ---

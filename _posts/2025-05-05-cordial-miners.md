@@ -2,7 +2,7 @@
 title: "Cordial Miners"
 last_modified_at: 2025-05-05T14:30:45+00:00
 categories:
-  - Write-Up
+  - Distributed Systems 
 tags:
   - Cryptocurrencies
   - Consensus
@@ -80,7 +80,7 @@ svg [stroke="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
   }
   
   .responsive-svg {
-    min-width: auto;
+    min-width: 70%;
     height: auto;
   }
   
