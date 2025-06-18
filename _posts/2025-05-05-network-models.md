@@ -80,6 +80,16 @@ What we can do, however, is utilize randomization in the leader selection proces
 </div>
 <br/>
 
+## Conclusion
+Partially synchronous protocols like **HotStuff** and **Bullshark (Partially-Synchronous Version)** can achieve better performance during normal network conditions because they can use timeouts to skip faulty processes. However, they sacrifice *liveness* during periods of actual asynchrony, which can be problematic in networks with unpredictable connectivity.
+
+Asynchronous protocols like **DAG-Rider** and **Tusk** maintain *liveness* regardless of network conditions, but they pay for this robustness with increased complexity and often higher latency. The need for randomized leader selection and the inability to use timeouts means these protocols must be more careful about when and how they make progress.
+
+What is really cool is how protocols like **Cordial Miners**, **Bullshark (Full Version)** and **Ditto** bridge these models by providing different configurations for different assumptions. This flexibility allows system designers to choose the right trade-offs for their specific use case—prioritizing performance when network conditions are good, or prioritizing robustness when they're uncertain. 
+
+The choice between partial synchrony and asynchrony often comes down to your system's priorities: Do you need guaranteed liveness even during network partitions? Or are you willing to sacrifice some liveness for better performance during normal operation? Understanding these network model assumptions helps explain why we see such diversity in modern consensus protocol designs.
+
+In my future write-ups on specific protocols, you'll see how these network model choices directly influence design decisions.
 <style>
 svg [stroke="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
     fill: white !important;
