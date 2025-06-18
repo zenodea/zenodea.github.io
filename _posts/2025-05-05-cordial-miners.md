@@ -29,10 +29,28 @@ This write-up marks the beginning of my series on Directed Acyclic Graph (DAG) b
 ## Uncertified DAG-Based Consensus Protocols
 The term uncertified DAG-Based consensus protocol was first coined by the Mysticeti protocol, but it applies very well to Cordial Miners as well. Usually, blocks proposed by validators need to be certified, meaning that $2f+1$ validators are required to validate and sign the block. Protocols that utilize Narwhal, for example, for transaction dissemination utilize certified blocks. In theory, this is good for a couple of reasons: Bullshark only requires a 2-message delay to commit a leader block and **equivocation** is simply not possible with certified blocks. Blocks will not receive the $2f+1$ votes required to certify a block due to **quorum intersection**.
 
-
 **Quorum Intersection**: A fancy way to say that two quorums will always have at least one validator in common. 
 
 Something very cool about Cordial Miners is that it can be configured for both partially synchronous or asynchronous assumptions. I would recommend reading this [write-up on network models]({% post_url 2025-05-05-network-models %}) to better understand the differences between these network assumptions before proceeding.
+
+## The Blocklace
+Before diving into the specific versions of Cordial Miners, we need to understand the core innovation introduced by the research, the **blocklace**. This is Cordial Miners' term for their DAG structure, and it's essentially a partially-ordered counterpart to the totally-ordered blockchain.
+
+Each block in the blocklace contains:
+- A set of transactions (the payload)
+- Hash pointers to previous blocks (the references)
+- The creator's cryptographic signature
+
+Unlike a traditional blockchain where each block points to exactly one predecessor, blocklace blocks can reference multiple previous blocks. When a validator creates a new block, they include references to blocks that haven't been referenced by any other block yet.
+
+### Consensus Components with the Blocklace
+The blocklace is clever because it handles all three components of consensus without needing separate protocols:
+
+**Dissemination**: When a validator creates a block, that block acts as both an acknowledgment and a disclosure. By including references to previous blocks, it acknowledges what the validator has seen. By omission, it reveals what the validator hasn't seen yet. This creates what the authors call **cordial dissemination** - if you notice someone is missing blocks you think they should have, you send those blocks to them.
+
+**Equivocation-Exclusion**: Instead of preventing equivocation (like reliable broadcast does), Cordial Miners allows equivocations to exist in the blocklace but excludes them during ordering. Two blocks from the same validator equivocate if neither observes the other. The protocol uses **approval logic** where a block only approves another block if it observes it and doesn't see any equivocations involving it.
+
+**Ordering**: This is handled by the **$\tau$ function**, which converts the partially-ordered blocklace into a totally-ordered sequence. The function works backward from **final leader blocks**, recursively processing their causal history while excluding equivocations.
 
 ## Partially Synchronous Version
 Cordial Miners realizes that certificates can be implicitly viewed within the DAG structure. It's better to understand this via graphical representations. First of all, let's look at a DAG representation of Bullshark:
@@ -62,7 +80,42 @@ We can see that Cordial Miners requires a $3$-message delay to propose a block. 
 
 Although Cordial Miners requires a $3$-message delay to commit a leader block, compared to the $2$-message delay of Bullshark, Cordial Miners blocks are simply signed by the validator (i.e., only a $1$-message delay to propose a block). We can clearly see how much faster this design is compared to Bullshark's "certified" DAG structure.
 
+In the partially synchronous version, Cordial Miners uses **3-round waves** and **deterministic leader selection** (typically round-robin). Since the network eventually becomes synchronous, validators can safely use timeouts to advance rounds and the protocol can rely on predetermined leaders without worrying about adversarial manipulation.
 
+## Asynchronous Version
+The asynchronous version is where Cordial Miners really shows its flexibility. The main challenge in asynchronous networks is that we can't use predetermined leaders. If an adversary knows who the leader will be ahead of time, they can manipulate message delivery to ensure that leader never gets enough support for finality.
+
+<div class="svg-container">
+<img src="{{ site.baseurl }}/assets/graphs/cordial_miners/cordial_miners_async_commit_rule.svg" alt="Example commit rule cordial miners - asynchronous version" class="responsive-svg">
+</div>
+<br/>
+
+For the asynchronous setting, Cordial Miners uses **5-round waves** instead of 3 rounds. This longer structure implements **retrospective leader selection** using a **shared random coin**. Here's how it works:
+
+- Round $r$: All validators propose blocks (nobody knows who the leader will be)
+- Rounds $r+1$ to $r+3$: Validators build their references, establishing the support patterns
+- Round $r+4$: The shared coin is revealed, determining which round $r$ block becomes the leader
+
+The shared coin uses cryptographic techniques to ensure the result is both unpredictable beforehand and agreed upon by all correct validators. Each validator includes their coin share in their round $r+4$ block, and once enough shares are collected, the leader can be deterministically computed.
+
+Since the leader is only revealed after the support patterns are already established, Byzantine validators can't strategically withhold support. With probability $\frac{2f+1}{3f+1} = \frac{2}{3}$, an honest validator will be selected as leader. When this happens and the leader has sufficient support, the block becomes final. This gives us an expected latency of $1.5 \times 5 = 7.5$ rounds.
+
+## Performance of Cordial Miners 
+
+**Partially Synchronous Settings:**
+- Cordial Miners: 3 rounds (good case), 4.5 rounds (expected)
+- Bullshark: 4 rounds (good case), 9 rounds (expected)
+
+**Asynchronous Settings:**
+- Cordial Miners: 5 rounds (good case), 7.5 rounds (expected)
+- DAG-Rider: 8 rounds (good case), 12-24 rounds (expected)
+
+The performance gains come directly from eliminating reliable broadcast. While other protocols spend multiple rounds just getting blocks certified before they can be considered for commitment, Cordial Miners can disseminate and process blocks in a single round.
+
+## After Cordial Miners? 
+Cordial Miners laid the foundation for even more advanced protocols. **Mysticeti** extended these ideas with multi-leader approaches, achieving the theoretical minimum latency of 3 rounds for partially synchronous networks and now powers the Sui blockchain in production. **Mahi-Mahi** pushed the asynchronous concepts further, supporting multiple leaders per wave and achieving performance that rivals partially synchronous protocols.
+
+In my next write-ups, I'll explore how Mysticeti and Mahi-Mahi built on these foundations to push consensus performance.
 <style>
 svg [stroke="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
     fill: white !important;
