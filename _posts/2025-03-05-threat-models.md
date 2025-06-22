@@ -47,16 +47,6 @@ CFT protocols typically require $2f + 1$ total nodes to tolerate $f$ crash fault
 
 The assumption here is that these nodes do not act maliciously, meaning that: nodes fail due to hardware issues, software bugs, or network partitions, but they don't actively try to disrupt the system. This makes CFT protocols simpler to implement and more efficient, but they cannot handle malicious actors.
 
-<div class="svg-container">
-<img src="{{ site.baseurl }}/assets/graphs/threat_models/ctf_yes.svg" alt="Example partial synchrony" class="responsive-svg">
-</div>
-<br/>
-
-<div class="svg-container">
-<img src="{{ site.baseurl }}/assets/graphs/threat_models/cft_no.svg" alt="Example partial synchrony" class="responsive-svg">
-</div>
-<br/>
-
 ## Byzantine Fault Tolerance (BFT)
 
 Byzantine fault tolerance represents a stronger threat model where nodes can exhibit **arbitrary behavior**. This includes not just crashes, but also malicious, coordinated attacks on the system.
@@ -66,16 +56,6 @@ Byzantine fault tolerance represents a stronger threat model where nodes can exh
 BFT protocols typically require $3f + 1$ total nodes to tolerate $f$ Byzantine faults. This higher threshold exists because Byzantine nodes can send conflicting messages, so we need enough honest nodes to detect and overcome such behavior.
 
 Let's consider a scenario where we have 4 nodes and 1 Byzantine node. The Byzantine node $B$ could send different proposals to different honest nodes, trying to create disagreement. As shown in the figure below, $B$ sends "Propose A" to $P_1$ and $P_2$, but "Propose B" to $P_3$. However, with $3f + 1 = 4$ total nodes, the honest majority can detect this inconsistency and exclude the Byzantine node's influence.
-
-<div class="svg-container">
-<img src="{{ site.baseurl }}/assets/graphs/threat_models/bft_yes.svg" alt="Example partial synchrony" class="responsive-svg">
-</div>
-<br/>
-
-<div class="svg-container">
-<img src="{{ site.baseurl }}/assets/graphs/threat_models/bft_no.svg" alt="Example partial synchrony" class="responsive-svg">
-</div>
-<br/>
 
 ## Adaptive vs Static Adversaries
 
