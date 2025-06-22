@@ -1,8 +1,8 @@
 ---
-title: "Cross Platform Config Manager (No Nix)"
+title: "Cross Platform Config Manager"
 last_modified_at: 2025-05-03T14:30:45+00:00
 categories: 
-- configurations
+- Configuration
 published: true
 ---
 <script type="text/javascript" async
