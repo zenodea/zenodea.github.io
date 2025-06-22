@@ -83,7 +83,7 @@ Although Cordial Miners requires a $3$-message delay to commit a leader block, c
 In the partially synchronous version, Cordial Miners uses **3-round waves** and **deterministic leader selection** (typically round-robin). Since the network eventually becomes synchronous, validators can safely use timeouts to advance rounds and the protocol can rely on predetermined leaders without worrying about adversarial manipulation.
 
 ## Asynchronous Version
-The asynchronous version is where Cordial Miners really shows its flexibility. The main challenge in asynchronous networks is that we can't use predetermined leaders. If an adversary knows who the leader will be ahead of time, they can manipulate message delivery to ensure that leader never gets enough support for finality.
+Cordial Miners is also capable of being configured for asynchronous network assumptions. The main challenge in asynchronous networks is that we can't use predetermined leaders. If an adversary knows who the leader will be ahead of time, they can manipulate message delivery to ensure that leader never gets enough support for finality.
 
 <div class="svg-container">
 <img src="{{ site.baseurl }}/assets/graphs/cordial_miners/cordial_miners_async_commit_rule.svg" alt="Example commit rule cordial miners - asynchronous version" class="responsive-svg">
