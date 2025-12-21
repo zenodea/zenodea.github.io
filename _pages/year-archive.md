@@ -5,6 +5,7 @@ layout: single
 author_profile: true
 classes: wide
 ---
+
 <style>
   .academics {
     max-width: 1200px;
@@ -143,11 +144,13 @@ classes: wide
       <div class="academic-institution__description">
         <p>Specializing in Cryptography and Cryptocurrency with focus on blockchain security and privacy-preserving technologies.</p>
       </div>
-      <p class="experience__projects">
+      <div class="experience__projects">
         <strong>Achievements:</strong>
-        <a>Distinction with an %80+ average</a> |
-        <a>Achieved a %92 for my thesis: Sharpedo: Dual-Mode Uncertified DAG-Based Consensus Protocol</a>
-      </p>
+        <ul>
+          <li>Distinction with an %80+ average</li>
+          <li>Achieved a %92 for my thesis: Sharpedo: Dual-Mode Uncertified DAG-Based Consensus Protocol</li>
+        </ul>
+      </div>
       <div class="academic-institution__skills">
         <h3 class="skills-title">Key Areas of Study</h3>
         <div class="skills-grid">
@@ -161,7 +164,6 @@ classes: wide
       </div>
     </div>
   </div>
-
 
   <div class="academic-institution">
     <div class="academic-institution__header">
@@ -178,11 +180,13 @@ classes: wide
       <div class="academic-institution__description">
         <p>Graduated with First Class Honours. Focused on algorithms, data structures, and software engineering principles.</p>
       </div>
-      <p class="experience__projects">
+      <div class="experience__projects">
         <strong>Achievements:</strong>
-        <a>First-Class Honours with an %80+ average</a> |
-        <a>Achieved a %79 for my thesis: Covid-19 analytics</a>
-      </p>
+        <ul>
+          <li>First-Class Honours with an 80+ average</li>
+          <li>Achieved a 79% for my thesis: Covid-19 analytics</li>
+        </ul>
+      </div>
       <div class="academic-institution__skills">
         <h3 class="skills-title">Skills Acquired</h3>
         <div class="skills-grid">

@@ -5,6 +5,7 @@ layout: single
 author_profile: true
 classes: wide
 ---
+
 <style>
   .experience {
     max-width: 1200px;
@@ -134,7 +135,7 @@ classes: wide
   <div class="experience__item">
     <div class="experience__header">
       <div class="experience__logo">
-        <img src="/assets/images/sussexlogo.png" alt="University of Sussex Logo">
+        <img src="/assets/images/worldover_logo.png" alt="Worldover Logo">
       </div>
       <div class="experience__title-container">
         <h2 class="experience__title">Worldover</h2>
@@ -146,7 +147,7 @@ classes: wide
       <div class="experience__description">
         <p>I am working at Worldover, a startup that offers a SaaS for compliance in the chemical and cosmetic industry. As a software engineer at Worldover, my tasks range from front-end and back-end development, alongside infrastractural work via AWS.</p>
         <p class="experience__projects">
-          <a href="https://www.scuolaguidalugano.ch/" target="_blank" class="project-link">Website</a> |
+          <a href="https://www.worldover.io/" target="_blank" class="project-link">Learn more</a>
         </p>
       </div>
       <div class="academic-institution__skills">

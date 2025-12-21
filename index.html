@@ -13,19 +13,19 @@ classes: wide
     margin: 0 auto;
     padding: 2rem;
   }
-  
+
   .profile-summary {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 3rem;
   }
-  
+
   .profile-content {
     text-align: center;
     margin-top: 2rem;
   }
-  
+
   .profile-title {
     font-size: 3rem;
     margin-bottom: 1.5rem;
@@ -33,7 +33,7 @@ classes: wide
     text-align: center;
     font-weight: bold;
   }
-  
+
   .profile-description {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -42,14 +42,14 @@ classes: wide
     margin: 0 auto;
     text-align: center;
   }
-  
+
   .profile-highlights {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
   }
-  
+
   .highlight-box {
     background: #2d3748;
     padding: 1rem 2rem;
@@ -60,19 +60,19 @@ classes: wide
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     border: 1px solid #4a5568;
   }
-  
+
   .highlight-box i {
     font-size: 1.5rem;
     color: #63b3ed;
   }
-  
+
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
   }
-  
+
   .skill-category {
     background: #2d3748;
     padding: 2rem;
@@ -80,18 +80,18 @@ classes: wide
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     border: 1px solid #4a5568;
   }
-  
+
   .skill-category h3 {
     color: #e2e8f0;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
   }
-  
+
   .skills-list {
     display: grid;
     gap: 1rem;
   }
-  
+
   .skill-item {
     display: flex;
     align-items: center;
@@ -104,26 +104,26 @@ classes: wide
     cursor: pointer;
     position: relative;
   }
-  
+
   .skill-item:hover {
     transform: translateX(5px);
     background: #2d3748;
   }
-  
+
   /* Right column hover direction */
   .skill-category:last-child .skill-item:hover {
     transform: translateX(-5px);
   }
-  
+
   .skill-item i {
     font-size: 1.2rem;
     color: #63b3ed;
   }
-  
+
   .skill-item span {
     color: #cbd5e0;
   }
-  
+
   .skill-details {
     display: none;
     position: absolute;
@@ -137,7 +137,7 @@ classes: wide
     opacity: 0;
     transition: opacity 0.2s ease;
   }
-  
+
   /* Left column dropdowns */
   .skill-category:first-child .skill-details {
     right: 100%;
@@ -145,7 +145,7 @@ classes: wide
     transform: translateY(-50%);
     margin-right: 0.5rem;
   }
-  
+
   /* Right column dropdowns */
   .skill-category:last-child .skill-details {
     left: 100%;
@@ -153,36 +153,36 @@ classes: wide
     transform: translateY(-50%);
     margin-left: 0.5rem;
   }
-  
+
   .skill-item:hover .skill-details {
     display: block;
     opacity: 1;
   }
-  
+
   .skill-details ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .skill-details li {
     color: #cbd5e0;
     padding: 0.4rem 0;
     border-bottom: 1px solid #4a5568;
     font-size: 0.9rem;
   }
-  
+
   .skill-details li:last-child {
     border-bottom: none;
   }
-  
+
   .experience-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
   }
-  
+
   .experience-card {
     background: #2d3748;
     padding: 2rem;
@@ -192,52 +192,52 @@ classes: wide
     transition: transform 0.2s;
     border: 1px solid #4a5568;
   }
-  
+
   .experience-icon {
     font-size: 2.5rem;
     color: #63b3ed;
     margin-bottom: 1rem;
   }
-  
+
   .experience-card h3 {
     color: #e2e8f0;
     margin-bottom: 0.5rem;
   }
-  
+
   .experience-location {
     color: #a0aec0;
     font-size: 0.9rem;
     margin-bottom: 1rem;
   }
-  
+
   .experience-description {
     color: #cbd5e0;
     line-height: 1.6;
     margin-bottom: 1.5rem;
   }
-  
+
   .section-divider {
     border: none;
     border-top: 2px solid #4a5568;
     margin: 3rem 0;
   }
-  
+
   .section-title {
     text-align: center;
     color: #e2e8f0;
     font-size: 2rem;
     margin-bottom: 2rem;
   }
-  
+
   .current-work-section {
     margin-top: 3rem;
   }
-  
+
   .current-projects-list {
     max-width: 800px;
     margin: 0 auto;
   }
-  
+
   .project-item {
     background: #2d3748;
     padding: 1.5rem;
@@ -249,22 +249,22 @@ classes: wide
     align-items: flex-start;
     gap: 1rem;
   }
-  
+
   .project-item:hover {
     transform: translateX(5px);
     background: #374151;
   }
-  
+
   .project-icon {
     color: #63b3ed;
     font-size: 1.5rem;
     margin-top: 0.2rem;
   }
-  
+
   .project-content {
     flex: 1;
   }
-  
+
   .project-title {
     color: #e2e8f0;
     font-size: 1.2rem;
@@ -273,13 +273,13 @@ classes: wide
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   .project-description {
     color: #cbd5e0;
     font-size: 0.95rem;
     line-height: 1.5;
   }
-  
+
   .project-status {
     display: inline-block;
     font-size: 0.8rem;
@@ -289,14 +289,14 @@ classes: wide
     background: #4a5568;
     color: #e2e8f0;
   }
-  
+
   .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
   }
-  
+
   .project-card {
     background: #2d3748;
     padding: 2rem;
@@ -305,30 +305,30 @@ classes: wide
     border: 1px solid #4a5568;
     transition: transform 0.2s;
   }
-  
+
   .project-card:hover {
     transform: translateY(-5px);
   }
-  
+
   .project-card h3 {
     color: #e2e8f0;
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }
-  
+
   .project-card p {
     color: #cbd5e0;
     line-height: 1.6;
     margin-bottom: 1.5rem;
   }
-  
+
   .project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1rem;
   }
-  
+
   .project-tag {
     background: #4a5568;
     color: #e2e8f0;
@@ -336,18 +336,18 @@ classes: wide
     border-radius: 15px;
     font-size: 0.9rem;
   }
-  
+
   .blog-preview-section {
     margin-top: 3rem;
   }
-  
+
   .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
   }
-  
+
   .blog-card {
     background: #2d3748;
     padding: 2rem;
@@ -356,30 +356,30 @@ classes: wide
     border: 1px solid #4a5568;
     transition: transform 0.2s;
   }
-  
+
   .blog-card:hover {
     transform: translateY(-5px);
   }
-  
+
   .blog-card h3 {
     color: #e2e8f0;
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
     margin-top: 0;
   }
-  
+
   .blog-date {
     color: #a0aec0;
     font-size: 0.9rem;
     margin-bottom: 1rem;
   }
-  
+
   .blog-excerpt {
     color: #cbd5e0;
     line-height: 1.6;
     margin-bottom: 1rem;
   }
-  
+
   .read-more {
     color: #63b3ed;
     text-decoration: none;
@@ -388,11 +388,11 @@ classes: wide
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   .read-more:hover {
     text-decoration: underline;
   }
-  
+
   .quick-links {
     display: flex;
     justify-content: center;
@@ -400,7 +400,7 @@ classes: wide
     margin-top: 2rem;
     flex-wrap: wrap;
   }
-  
+
   .quick-link {
     background: #2d3748;
     padding: 1rem 2rem;
@@ -413,55 +413,55 @@ classes: wide
     transition: transform 0.2s;
     border: 1px solid #4a5568;
   }
-  
+
   .quick-link:hover {
     transform: translateY(-3px);
     background: #4a5568;
   }
-  
+
   .quick-link i {
     color: #63b3ed;
     font-size: 1.2rem;
   }
-  
+
   @media (max-width: 768px) {
     .about-section {
       padding: 1rem;
     }
-    
+
     .profile-highlights {
       flex-direction: column;
       align-items: center;
     }
-    
+
     .highlight-box {
       width: 100%;
       max-width: 300px;
     }
-  
+
     /* Disable dropdowns on mobile */
     .skill-details {
       display: none !important;
     }
-    
+
     .project-item {
       padding: 1rem;
     }
-    
+
     .project-icon {
       font-size: 1.2rem;
     }
-    
+
     .project-grid,
     .blog-grid {
       grid-template-columns: 1fr;
     }
-    
+
     .quick-links {
       flex-direction: column;
       align-items: center;
     }
-    
+
     .quick-link {
       width: 100%;
       max-width: 300px;
@@ -469,7 +469,7 @@ classes: wide
     }
   }
   </style>
-  
+
 <div class="about-section">
   <div class="profile-content">
     <h1 class="profile-title">Welcome to My Portfolio</h1>
@@ -479,10 +479,6 @@ classes: wide
   </div>
 
   <div class="quick-links">
-    <a href="/about" class="quick-link">
-      <i class="fas fa-user"></i>
-      About Me
-    </a>
     <a href="/contact" class="quick-link">
       <i class="fas fa-envelope"></i>
       Contact
@@ -493,45 +489,183 @@ classes: wide
     </a>
   </div>
 
-  <div class="current-work-section">
-    <h2 class="section-title">Currently Working On</h2>
-    <div class="current-projects-list">
-      <div class="project-item">
-        <i class="fas fa-code project-icon"></i>
-        <div class="project-content">
-          <h3 class="project-title">Information Security MSc at UCL</h3>
-          <p class="project-description">Focusing on cryptographic techniques, Privacy-Enhancing Technologies (PETs), and blockchain development with a focus on Consensus protocols.</p>
-          <span class="project-status">In Progress</span>
-        </div>
+  <div class="about-section">
+  <div class="about-header">
+    <div class="profile-summary">
+      <div class="profile-content">
+        <h1 class="profile-title">About Me</h1>
+        <p class="profile-description">
+        I'm a software engineer working at Worldover. Graduated at University College London (UCL) with an MSc in Information security, with a focus on Cyrpography, Cryptocurrencies and distributed systems. I enjoy working on challenging technical problems, and have experience in both software development and security research.
+        </p>
       </div>
-      <div class="project-item">
-        <i class="fas fa-code project-icon"></i>
-        <div class="project-content">
-          <h3 class="project-title">Dual Mode DAG-based Consensus Protocol</h3>
-          <p class="project-description">Researching how to combine Mahi-Mahi and Mysticeti protocols to create a consensus mechanism that remains operational during network asynchrony periods while maintaining high throughput.</p>
-          <span class="project-status">Planning Phase</span>
+      <div class="profile-highlights">
+        <div class="highlight-box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>MSc Information Security</span>
+        </div>
+        <div class="highlight-box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>BSc Computer Science</span>
+        </div>
+        <div class="highlight-box">
+          <i class="fas fa-project-diagram"></i>
+          <span>Distributed Systems Research</span>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="blog-preview-section">
-    <h2 class="section-title">Latest Blog Posts</h2>
-    <div class="blog-grid">
-      {% for post in site.posts limit:2 %}
-        <div class="blog-card">
-          <h3>{{ post.title }}</h3>
-          <div class="blog-date">
-            <i class="far fa-calendar"></i> {{ post.date | date: "%B %d, %Y" }}
+  <hr class="section-divider">
+
+  <div class="skills-section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Programming</h3>
+        <div class="skills-list">
+          <div class="skill-item">
+            <i class="fab fa-java"></i>
+            <span>Java</span>
+            <div class="skill-details">
+              <ul>
+                <li>Spring Framework</li>
+                <li>JUnit Testing</li>
+                <li>Object-Oriented Design</li>
+              </ul>
+            </div>
           </div>
-          <p class="blog-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-          <div class="project-tags">
-            <span class="project-tag">{{ post.categories | first }}</span>
+          <div class="skill-item">
+            <i class="fab fa-python"></i>
+            <span>Python</span>
+            <div class="skill-details">
+              <ul>
+                <li>Data Analysis</li>
+                <li>Machine Learning</li>
+                <li>Web Development</li>
+              </ul>
+            </div>
           </div>
-          <a href="{{ post.url | relative_url }}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          <div class="skill-item">
+            <i class="fab fa-js"></i>
+            <span>Web Development</span>
+            <div class="skill-details">
+              <ul>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>TypeScript</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-microchip"></i>
+            <span>C</span>
+            <div class="skill-details">
+              <ul>
+                <li>System Programming</li>
+                <li>Memory Management</li>
+                <li>Embedded Systems</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      {% endfor %}
+      </div>
+
+      <div class="skill-category">
+        <h3>Areas of Interest</h3>
+        <div class="skills-list">
+          <div class="skill-item">
+            <i class="fas fa-lock"></i>
+            <span>Cryptography</span>
+            <div class="skill-details">
+              <ul>
+                <li>Asymmetric cryptography</li>
+                <li>Symmetric cryptography</li>
+                <li>Blockchain Security</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-database"></i>
+            <span>Distributed Systems</span>
+            <div class="skill-details">
+              <ul>
+                <li>Consensus Algorithms</li>
+                <li>System Architecture</li>
+                <li>Network Models</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-robot"></i>
+            <span>Machine Learning</span>
+            <div class="skill-details">
+              <ul>
+                <li>LLM Integration</li>
+                <li>Data Analysis</li>
+                <li>Data Prediction</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-shield-alt"></i>
+            <span>Security</span>
+            <div class="skill-details">
+              <ul>
+                <li>Network Security</li>
+                <li>Penetration Testing</li>
+                <li>Security Protocols</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="experience-section">
+    <h2 class="section-title">Recent Work</h2>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <div class="experience-icon">
+          <i class="fas fa-university"></i>
+        </div>
+        <h3>MSc Information Security</h3>
+        <p class="experience-location">University College London</p>
+        <p class="experience-description">Researching blockchain security and privacy-preserving technologies. Focus on cryptography and cryptocurrency systems.</p>
+        <a href="/academics/" class="btn btn--primary">Learn More</a>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-icon">
+          <i class="fas fa-flask"></i>
+        </div>
+        <h3>Research Assistant</h3>
+        <p class="experience-location">University of Sussex</p>
+        <p class="experience-description">Working on novel technologies and methodologies in security research. Quick adaptation to new tools and frameworks.</p>
+        <a href="/experience/" class="btn btn--primary">Learn More</a>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>COVID-19 Analytics</h3>
+        <p class="experience-location">Research Project</p>
+        <p class="experience-description">Built a system to detect changes in COVID-19 growth rates using public data. Focus on data analysis and visualization.</p>
+        <a href="https://github.com/Hazumino/dissertation" class="btn btn--primary">Learn More</a>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-icon">
+          <i class="fas fa-project-diagram"></i>
+        </div>
+        <h3>Sharpedo Protocol</h3>
+        <p class="experience-location">Research Project</p>
+        <p class="experience-description">Developed a dual DAG protocol for improved blockchain scalability. Focus on distributed systems and consensus mechanisms.</p>
+        <a href="https://github.com/Hazumino/dual-mode-consensus" class="btn btn--primary">Learn More</a>
+      </div>
     </div>
   </div>
 </div>
-  
