@@ -11,7 +11,7 @@ classes: wide
     margin: 0 auto;
     padding: 2rem;
   }
-  
+
   .academic-institution {
     background: #2d3748;
     padding: 2rem;
@@ -20,13 +20,13 @@ classes: wide
     border: 1px solid #4a5568;
     margin-bottom: 2rem;
   }
-  
+
   .academic-institution__header {
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
   }
-  
+
   .academic-institution__logo {
     width: 200px;
     height: 200px;
@@ -40,7 +40,7 @@ classes: wide
     border-radius: 8px;
     border: 1px solid #4a5568;
   }
-  
+
   .academic-institution__logo img {
     width: 100%;
     height: 100%;
@@ -49,31 +49,31 @@ classes: wide
     object-fit: contain;
     display: block;
   }
-  
+
   .academic-institution__title {
     margin: 0 0 0.5rem 0;
     color: #e2e8f0;
     font-size: 1.8rem;
   }
-  
+
   .academic-institution__degree {
     color: #cbd5e0;
     margin-bottom: 0.2rem;
     font-size: 1.2rem;
   }
-  
+
   .academic-institution__date {
     color: #a0aec0;
     margin-top: 0;
     font-style: italic;
   }
-  
+
   .academic-institution__description {
     margin-bottom: 1.5rem;
     color: #cbd5e0;
     line-height: 1.6;
   }
-  
+
   .skill-tag {
     display: inline-block;
     background-color: #1a202c;
@@ -85,12 +85,12 @@ classes: wide
     border: 1px solid #4a5568;
     transition: transform 0.2s;
   }
-  
+
   .skill-tag:hover {
     transform: translateX(5px);
     background: #2d3748;
   }
-  
+
   .skills-title {
     margin: 0 0 1rem 0;
     font-size: 1.3rem;
@@ -98,13 +98,13 @@ classes: wide
     border-bottom: 2px solid #4a5568;
     padding-bottom: 0.5rem;
   }
-  
+
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
   }
-  
+
   .section-divider {
     margin: 3rem 0;
     border: none;
@@ -115,12 +115,12 @@ classes: wide
     .academics {
       padding: 1rem;
     }
-    
+
     .academic-institution__header {
       flex-direction: column;
       text-align: center;
     }
-    
+
     .academic-institution__logo {
       margin: 0 0 1rem 0;
     }
@@ -143,6 +143,11 @@ classes: wide
       <div class="academic-institution__description">
         <p>Specializing in Cryptography and Cryptocurrency with focus on blockchain security and privacy-preserving technologies.</p>
       </div>
+      <p class="experience__projects">
+        <strong>Achievements:</strong>
+        <a>Distinction with an %80+ average</a> |
+        <a>Achieved a %92 for my thesis: Sharpedo: Dual-Mode Uncertified DAG-Based Consensus Protocol</a>
+      </p>
       <div class="academic-institution__skills">
         <h3 class="skills-title">Key Areas of Study</h3>
         <div class="skills-grid">
@@ -173,6 +178,11 @@ classes: wide
       <div class="academic-institution__description">
         <p>Graduated with First Class Honours. Focused on algorithms, data structures, and software engineering principles.</p>
       </div>
+      <p class="experience__projects">
+        <strong>Achievements:</strong>
+        <a>First-Class Honours with an %80+ average</a> |
+        <a>Achieved a %79 for my thesis: Covid-19 analytics</a>
+      </p>
       <div class="academic-institution__skills">
         <h3 class="skills-title">Skills Acquired</h3>
         <div class="skills-grid">

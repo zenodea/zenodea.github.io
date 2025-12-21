@@ -10,7 +10,7 @@ classes: wide
     <div class="profile-summary">
       <div class="profile-content">
         <h1 class="profile-title">About Me</h1>
-        <p class="profile-description">I'm a Computer Science graduate currently pursuing my MSc in Information Security at UCL. I enjoy working on challenging technical problems and have experience in both software development and security research.</p>
+        <p class="profile-description">I'm a software engineer working at Worldover. Graduated at University College London (UCL) with an MSc in Information security, with a focus on Cyrpography, Cryptocurrencies and distributed systems. I enjoy working on challenging technical problems, and have experience in both software development and security research.</p>
       </div>
       <div class="profile-highlights">
         <div class="highlight-box">
@@ -410,12 +410,12 @@ classes: wide
   .about-section {
     padding: 1rem;
   }
-  
+
   .profile-highlights {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .highlight-box {
     width: 100%;
     max-width: 300px;

@@ -2,7 +2,7 @@
 title: "Cordial Miners"
 last_modified_at: 2025-05-05T14:30:45+00:00
 categories:
-  - Consensus Protocols 
+  - Consensus Protocols
 ---
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -29,7 +29,7 @@ This write-up marks the beginning of my series on Directed Acyclic Graph (DAG) b
 ## Uncertified DAG-Based Consensus Protocols
 The term uncertified DAG-Based consensus protocol was first coined by the Mysticeti protocol, but it applies very well to Cordial Miners as well. Usually, blocks proposed by validators need to be certified, meaning that $2f+1$ validators are required to validate and sign the block. Protocols that utilize Narwhal, for example, for transaction dissemination utilize certified blocks. In theory, this is good for a couple of reasons: Bullshark only requires a 2-message delay to commit a leader block and **equivocation** is simply not possible with certified blocks. Blocks will not receive the $2f+1$ votes required to certify a block due to **quorum intersection**.
 
-**Quorum Intersection**: A fancy way to say that two quorums will always have at least one validator in common. 
+**Quorum Intersection**: A fancy way to say that two quorums will always have at least one validator in common.
 
 Something very cool about Cordial Miners is that it can be configured for both partially synchronous or asynchronous assumptions. I would recommend reading this [write-up on network models]({% post_url 2025-05-05-network-models %}) to better understand the differences between these network assumptions before proceeding.
 
@@ -100,7 +100,7 @@ The shared coin uses cryptographic techniques to ensure the result is both unpre
 
 Since the leader is only revealed after the support patterns are already established, Byzantine validators can't strategically withhold support. With probability $\frac{2f+1}{3f+1} = \frac{2}{3}$, an honest validator will be selected as leader. When this happens and the leader has sufficient support, the block becomes final. This gives us an expected latency of $1.5 \times 5 = 7.5$ rounds.
 
-## Performance of Cordial Miners 
+## Performance of Cordial Miners
 
 **Partially Synchronous Settings:**
 - Cordial Miners: 3 rounds (good case), 4.5 rounds (expected)
@@ -112,10 +112,9 @@ Since the leader is only revealed after the support patterns are already establi
 
 The performance gains come directly from eliminating reliable broadcast. While other protocols spend multiple rounds just getting blocks certified before they can be considered for commitment, Cordial Miners can disseminate and process blocks in a single round.
 
-## After Cordial Miners? 
+## After Cordial Miners?
 Cordial Miners laid the foundation for even more advanced protocols. **Mysticeti** extended these ideas with multi-leader approaches, achieving the theoretical minimum latency of 3 rounds for partially synchronous networks and now powers the Sui blockchain in production. **Mahi-Mahi** pushed the asynchronous concepts further, supporting multiple leaders per wave and achieving performance that rivals partially synchronous protocols.
 
-In my next write-ups, I'll explore how Mysticeti and Mahi-Mahi built on these foundations to push consensus performance.
 <style>
 svg [stroke="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
     fill: white !important;
@@ -128,19 +127,13 @@ svg [stroke="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
     justify-content: center;
     width: 100%;
   }
-  
+
   .responsive-svg {
     min-width: 70%;
     height: auto;
   }
-  
+
   .inverted {
     filter: invert(100%);
   }
 </style>
-
-
-
- 
-
-

@@ -120,7 +120,7 @@ h3
 <div class="contact-section">
   <h2 class="section-title">Get in Touch</h2>
   <p class="profile-description">
-    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+    I'm always open to discussing new projects or opportunities!
   </p>
 
   <div class="contact-grid">
@@ -146,7 +146,7 @@ h3
       <h3><i class="fab fa-github"></i> GitHub</h3>
       <div class="contact-info">
         <p>Check out my code:</p>
-        <a href="https://github.com/hazumino" target="_blank">github.com/hazumino</a>
+        <a href="https://github.com/zenodea" target="_blank">github.com/zenodea</a>
         <p>Explore my projects and contributions.</p>
       </div>
     </div>
