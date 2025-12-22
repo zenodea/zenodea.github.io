@@ -1,4 +1,18 @@
-_site
-.sass-cache
+_site/
+.sass-cache/
 .jekyll-metadata
+.jekyll-cache/
 Gemfile.lock
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+# Bundler
+vendor/
+.bundle/

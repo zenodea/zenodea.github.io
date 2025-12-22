@@ -5,27 +5,12 @@ categories:
 - Configuration
 published: true
 ---
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+{% include mathjax.html %}
+{% include svg-styles.html %}
 
+{% include mathjax.html %}
+{% include svg-styles.html %}
 
-<link rel="stylesheet" type="text/css" href="http://tikzjax.com/v1/fonts.css">
-<script src="https://tikzjax.com/v1/tikzjax.js"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      processEscapes: true
-    },
-    TeX: {
-      equationNumbers: { autoNumber: "AMS" }
-    }
-  });
-</script>
-<script src="{{ '/assets/js/copy-button.js' | relative_url }}"></script>
 # Introduction
 This is a short write-up on dotfiles management for developers working across multiple machines (different operating systems (OS)). Dotfiles are configuration files that customize your development environment, and, when building a dotfiles system, we need to handle OS differences and ensure consistency across machines.
 
@@ -251,28 +236,6 @@ create_home_symlinks "$GENERAL_DIR"
 
 echo "Symlinks created successfully!"
 ```
-<style>
-svg [stroke="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
-    fill: white !important;
-    stroke: white!important;
-
-}
-
-  .svg-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .responsive-svg {
-    min-width: 70%;
-    height: auto;
-  }
-  
-  .inverted {
-    filter: invert(100%);
-  }
-</style>
 
 
  

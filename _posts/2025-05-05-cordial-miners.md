@@ -4,26 +4,10 @@ last_modified_at: 2025-05-05T14:30:45+00:00
 categories:
   - Consensus Protocols
 ---
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+{% include mathjax.html %}
+{% include svg-styles.html %}
 
 
-<link rel="stylesheet" type="text/css" href="http://tikzjax.com/v1/fonts.css">
-<script src="https://tikzjax.com/v1/tikzjax.js"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      processEscapes: true
-    },
-    TeX: {
-      equationNumbers: { autoNumber: "AMS" }
-    }
-  });
-</script>
 This write-up marks the beginning of my series on Directed Acyclic Graph (DAG) based consensus protocols. My research project has led me to read many consensus protocols, but the one that I wanted to start with was a protocol named Cordial Miners. I have not found many articles on this protocol; rather, most of the popularity has gone into its "spiritual successor", Mysticeti-C and Mahi-Mahi. So, I wanted to shed some light on the protocol that allowed those two to come to fruition. Before delving into this write-up, I would recommend familiarizing yourself with DAG-based consensus protocols (Tusk, Bullshark, etc.), as they differ in many ways compared to more traditional blockchains (HotStuff, etc.).
 
 ## Uncertified DAG-Based Consensus Protocols

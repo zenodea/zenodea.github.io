@@ -5,27 +5,9 @@ categories:
 - Terminal
 published: false
 ---
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+{% include mathjax.html %}
+{% include svg-styles.html %}
 
-
-<link rel="stylesheet" type="text/css" href="http://tikzjax.com/v1/fonts.css">
-<script src="https://tikzjax.com/v1/tikzjax.js"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      processEscapes: true
-    },
-    TeX: {
-      equationNumbers: { autoNumber: "AMS" }
-    }
-  });
-</script>
-<script src="{{ '/assets/js/copy-button.js' | relative_url }}"></script>
 I am one of those people that loves to try and integrate as many tools as possible into my terminal, and yes, I am they type of person to say "I used neovim BTW"...
 
 I recently ended up doing lots of CTFs on pwn.college, and, while it would have been easier to simply utilise their vscode workspace set up for each account, I wanted to be special and ssh onto my terminal directly. But I quickly came upon an annoying problem, I found pwn.college to be extremely slow when utilising nvim directly through them, so I decided to write most of my scripts on my local machine. I created a nifty setup with nvim and tmux, allowinging me to efficiently switch between panes, but I came upon an annoying problem.
@@ -72,28 +54,6 @@ return {
   },
 }
 ```
-<style>
-svg [stroke="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
-    fill: white !important;
-    stroke: white!important;
-
-}
-
-  .svg-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .responsive-svg {
-    min-width: 70%;
-    height: auto;
-  }
-  
-  .inverted {
-    filter: invert(100%);
-  }
-</style>
 
 
  

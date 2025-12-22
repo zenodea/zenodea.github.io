@@ -2,28 +2,10 @@
 title: "Network Models"
 last_modified_at: 2025-01-05T14:30:45+00:00
 categories:
-  - Distributed Systems 
+  - Distributed Systems
 ---
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-
-<link rel="stylesheet" type="text/css" href="http://tikzjax.com/v1/fonts.css">
-<script src="https://tikzjax.com/v1/tikzjax.js"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      processEscapes: true
-    },
-    TeX: {
-      equationNumbers: { autoNumber: "AMS" }
-    }
-  });
-</script>
+{% include mathjax.html %}
+{% include svg-styles.html %}
 
 # Introduction
 This is a short write-up on network models utilized by consensus protocols. Consensus protocols are necessary for a system to reach agreement on the state of the system. When building a distributed network, we need to make assumptions about message delivery times to ensure consensus can be achieved.
@@ -49,7 +31,7 @@ We mostly care about **partial synchrony** and **asynchrony** in practical distr
 
 ## Partial Synchrony
 
-In partial synchrony, we assume that, once $GST$ is reached, all messages sent by honest processes will reach other processes in $\Delta$ time. If a message is not received within $\Delta$, we can assume that the sender is either faulty or malicious, thus we can safely skip it. This is known as a **timeout** mechanism, where after a certain timeout (usually $\Delta$), a process can be skipped. 
+In partial synchrony, we assume that, once $GST$ is reached, all messages sent by honest processes will reach other processes in $\Delta$ time. If a message is not received within $\Delta$, we can assume that the sender is either faulty or malicious, thus we can safely skip it. This is known as a **timeout** mechanism, where after a certain timeout (usually $\Delta$), a process can be skipped.
 
 Let's consider a scenario where each round a process $P$ is chosen to be leader. This leader needs to communicate with all other processes within $\Delta$, or the other processes will skip it. As the figure below shows, $P_1$ proposes a block in time ($< \Delta$), and we continue to the next leader process $P_2$. $P_2$ also sends a message to all other processes within $\Delta$, however, $P_3$, the leader of the next round, does not. Thus, $P_3$ is skipped, and we move on to the next leader.
 
@@ -71,7 +53,7 @@ Let's look at this using a more realistic scenario. We have 4 processes that pro
 
 In this case, with deterministic leader selection, the system could stall indefinitely.
 
-The malicious actor knows in advance when they will be given the leader role, due to the deterministic leader selection process, thus, they simply need to wait for such occasion to disrupt our system, and we cannot use timeouts due to our asynchronous assumptions. 
+The malicious actor knows in advance when they will be given the leader role, due to the deterministic leader selection process, thus, they simply need to wait for such occasion to disrupt our system, and we cannot use timeouts due to our asynchronous assumptions.
 
 What we can do, however, is utilize randomization in the leader selection process to thwart such adversaries. The intuition here is that, instead of choosing a leader deterministically, we choose a leader after they have already proposed the blocks for a round, "after the fact." For example, in the figure below, each round a proposer $P_n$ proposes a block, and in round $r+1$, a leader is chosen via some form of randomness. It's important to note that processes that have not proposed a block in a round, such as $P_2$ in round $2$, can still be chosen as leaders in future rounds. We only care that **liveness** will, eventually, be achieved. Thus, each round we have some probability of picking an honest process that has proposed a block, and after enough rounds, the probability approaches 1.
 
@@ -85,7 +67,7 @@ Partially synchronous protocols like **HotStuff** and **Bullshark (Partially-Syn
 
 Asynchronous protocols like **DAG-Rider** and **Tusk** maintain *liveness* regardless of network conditions, but they pay for this robustness with increased complexity and often higher latency. The need for randomized leader selection and the inability to use timeouts means these protocols must be more careful about when and how they make progress.
 
-What is really cool is how protocols like **Cordial Miners**, **Bullshark (Full Version)** and **Ditto** bridge these models by providing different configurations for different assumptions. This flexibility allows system designers to choose the right trade-offs for their specific use case—prioritizing performance when network conditions are good, or prioritizing robustness when they're uncertain. 
+What is really cool is how protocols like **Cordial Miners**, **Bullshark (Full Version)** and **Ditto** bridge these models by providing different configurations for different assumptions. This flexibility allows system designers to choose the right trade-offs for their specific use case—prioritizing performance when network conditions are good, or prioritizing robustness when they're uncertain.
 
 The choice between partial synchrony and asynchrony often comes down to your system's priorities: Do you need guaranteed liveness even during network partitions? Or are you willing to sacrifice some liveness for better performance during normal operation? Understanding these network model assumptions helps explain why we see such diversity in modern consensus protocol designs.
 
@@ -102,19 +84,13 @@ svg [stroke="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
     justify-content: center;
     width: 100%;
   }
-  
+
   .responsive-svg {
     min-width: 70%;
     height: auto;
   }
-  
+
   .inverted {
     filter: invert(100%);
   }
 </style>
-
-
-
- 
-
-

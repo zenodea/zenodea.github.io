@@ -30,7 +30,7 @@ classes: wide
 
   .experience__logo {
     width: 200px;
-    height: auto;
+    height: 200px;
     margin-right: 1.5rem;
     display: flex;
     align-items: center;
@@ -43,9 +43,12 @@ classes: wide
   }
 
   .experience__logo img {
+    width: 100%;
+    height: 100%;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    display: block;
   }
 
   .experience__title {
@@ -138,41 +141,25 @@ classes: wide
         <img src="/assets/images/worldover_logo.png" alt="Worldover Logo">
       </div>
       <div class="experience__title-container">
-        <h2 class="experience__title">Worldover</h2>
+        <h2 class="experience__title">Worldover™</h2>
+        <p class="experience__position"><strong>Software Engineer</strong></p>
+        <p class="experience__date">September 2025 - present</p>
       </div>
     </div>
-    <div class="experience__subsection">
-      <p class="experience__position"><strong>Software Engineer</strong></p>
-      <p class="experience__date">September 2025 - present</p>
+    <div class="experience__content">
       <div class="experience__description">
         <p>I am working at Worldover, a startup that offers a SaaS for compliance in the chemical and cosmetic industry. As a software engineer at Worldover, my tasks range from front-end and back-end development, alongside infrastractural work via AWS.</p>
         <p class="experience__projects">
-          <a href="https://www.worldover.io/" target="_blank" class="project-link">Learn more</a>
+          <a href="https://www.worldover.io/" target="_blank" class="project-link">Learn more about Worldover</a>
         </p>
       </div>
-      <div class="academic-institution__skills">
+      <div class="experience__skills">
         <h3 class="skills-title">Skills Applied</h3>
         <div class="skills-grid">
           <div class="skill-tag">Typescript</div>
           <div class="skill-tag">AWS</div>
-          <div class="skill-tag">LLM</div>
-        </div>
-      </div>
-    </div>
-    <hr class="experience__divider">
-    <div class="experience__subsection">
-      <p class="experience__position"><strong>Teacher Assistant</strong></p>
-      <p class="experience__date">September 2022 - December 2022</p>
-      <div class="experience__description">
-        <p>I helped students during seminar sessions for a Compiler Architecture module, explaining RISC-V architecture, and conducting help sessions.</p>
-      </div>
-      <div class="academic-institution__skills">
-        <h3 class="skills-title">Skills Applied</h3>
-        <div class="skills-grid">
-          <div class="skill-tag">RISC-V</div>
-          <div class="skill-tag">Compiler Design</div>
-          <div class="skill-tag">Teaching</div>
-          <div class="skill-tag">Technical Communication</div>
+          <div class="skill-tag">LLM Integration</div>
+          <div class="skill-tag">Agile</div>
         </div>
       </div>
     </div>
@@ -185,11 +172,11 @@ classes: wide
       </div>
       <div class="experience__title-container">
         <h2 class="experience__title">NorthsouthUX</h2>
+        <p class="experience__position"><strong>Full Stack Web Developer</strong></p>
+        <p class="experience__date">May 2023 - Dec 2023</p>
       </div>
     </div>
-    <div class="experience__subsection">
-      <p class="experience__position"><strong>Full Stack Web Developer</strong></p>
-      <p class="experience__date">May 2023 - Dec 2023</p>
+    <div class="experience__content">
       <div class="experience__description">
         <p>As a Full-stack Developer at NorthsouthUX, my primary responsibility involves transforming Figma design specifications into fully functional websites, ensuring the accurate implementation of visual concepts while maintaining optimal user experience standards.</p>
         <p class="experience__projects">
@@ -198,7 +185,7 @@ classes: wide
           <a href="https://softwaregestionale-ch.vercel.app/" target="_blank" class="project-link">Software Gestionale CH</a>
         </p>
       </div>
-      <div class="academic-institution__skills">
+      <div class="experience__skills">
         <h3 class="skills-title">Skills Applied</h3>
         <div class="skills-grid">
           <div class="skill-tag">HTML/CSS</div>
@@ -219,38 +206,48 @@ classes: wide
       </div>
       <div class="experience__title-container">
         <h2 class="experience__title">University of Sussex</h2>
+        <p class="experience__position"><strong>Teacher Assistant</strong></p>
+        <p class="experience__date">September 2022 - December 2022</p>
       </div>
     </div>
-    <div class="experience__subsection">
-      <p class="experience__position"><strong>Research Assistant</strong></p>
-      <p class="experience__date">May 2022 - September 2022</p>
-      <div class="experience__description">
-        <p>I researched novel concepts in Computer Vision to create an Exam Script Analyser that could correctly identify and extract key information from student exams.</p>
-      </div>
-      <div class="academic-institution__skills">
-        <h3 class="skills-title">Skills Applied</h3>
-        <div class="skills-grid">
-          <div class="skill-tag">Python</div>
-          <div class="skill-tag">OpenCV</div>
-          <div class="skill-tag">Machine Learning</div>
-          <div class="skill-tag">OCR</div>
-        </div>
-      </div>
-    </div>
-    <hr class="experience__divider">
-    <div class="experience__subsection">
-      <p class="experience__position"><strong>Teacher Assistant</strong></p>
-      <p class="experience__date">September 2022 - December 2022</p>
+    <div class="experience__content">
       <div class="experience__description">
         <p>I helped students during seminar sessions for a Compiler Architecture module, explaining RISC-V architecture, and conducting help sessions.</p>
       </div>
-      <div class="academic-institution__skills">
+      <div class="experience__skills">
         <h3 class="skills-title">Skills Applied</h3>
         <div class="skills-grid">
           <div class="skill-tag">RISC-V</div>
           <div class="skill-tag">Compiler Design</div>
           <div class="skill-tag">Teaching</div>
           <div class="skill-tag">Technical Communication</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="experience__section-divider">
+  <div class="experience__item">
+    <div class="experience__header">
+      <div class="experience__logo">
+        <img src="/assets/images/sussexlogo.png" alt="University of Sussex Logo">
+      </div>
+      <div class="experience__title-container">
+        <h2 class="experience__title">University of Sussex</h2>
+        <p class="experience__position"><strong>Research Assistant</strong></p>
+        <p class="experience__date">May 2022 - September 2022</p>
+      </div>
+    </div>
+    <div class="experience__content">
+      <div class="experience__description">
+        <p>I researched novel concepts in Computer Vision to create an Exam Script Analyser that could correctly identify and extract key information from student exams. This research was led in collaboration with industry partner Foxit.</p>
+      </div>
+      <div class="experience__skills">
+        <h3 class="skills-title">Skills Applied</h3>
+        <div class="skills-grid">
+          <div class="skill-tag">Python</div>
+          <div class="skill-tag">OpenCV</div>
+          <div class="skill-tag">Machine Learning</div>
+          <div class="skill-tag">OCR</div>
         </div>
       </div>
     </div>

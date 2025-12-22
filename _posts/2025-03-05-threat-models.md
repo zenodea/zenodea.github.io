@@ -1,30 +1,13 @@
 ---
 title: "Threat Models"
 last_modified_at: 2025-05-03T14:30:45+00:00
-categories: 
+categories:
 - Distributed Systems
 published: true
 ---
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+{% include mathjax.html %}
+{% include svg-styles.html %}
 
-
-<link rel="stylesheet" type="text/css" href="http://tikzjax.com/v1/fonts.css">
-<script src="https://tikzjax.com/v1/tikzjax.js"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      processEscapes: true
-    },
-    TeX: {
-      equationNumbers: { autoNumber: "AMS" }
-    }
-  });
-</script>
 # Introduction
 This is a short write-up on threat models utilized by consensus protocols. Consensus protocols are necessary for a system to reach agreement on the state of the system. When building a distributed network, we need to make assumptions about the types of failures and adversarial behavior that can occur to ensure consensus can be achieved.
 
@@ -43,7 +26,7 @@ A crash fault tolerant (CFT) protocol is one that is capable of handling $f$ **c
 
 **Crash Faults**: A node that suffers a crash fault simply stops responding. It doesn't send any more messages, doesn't participate in the protocol, and essentially becomes unreachable. Importantly, crashed nodes do not send conflicting or malicious messages.
 
-CFT protocols typically require $2f + 1$ total nodes to tolerate $f$ crash faults. This is because we need a majority of nodes to remain operational to make progress. Examples of CFT protocols include **Raft** and **PBFT** when configured for crash faults only. Intuitively, the $2f+1$ metric means that our system will continue working as expected as long as $>50%$ of the nodes are still operating. 
+CFT protocols typically require $2f + 1$ total nodes to tolerate $f$ crash faults. This is because we need a majority of nodes to remain operational to make progress. Examples of CFT protocols include **Raft** and **PBFT** when configured for crash faults only. Intuitively, the $2f+1$ metric means that our system will continue working as expected as long as $>50%$ of the nodes are still operating.
 
 The assumption here is that these nodes do not act maliciously, meaning that: nodes fail due to hardware issues, software bugs, or network partitions, but they don't actively try to disrupt the system. This makes CFT protocols simpler to implement and more efficient, but they cannot handle malicious actors.
 
@@ -71,7 +54,7 @@ Most practical BFT protocols assume a static adversary for simplicity.
 
 Different protocols make different assumptions about the maximum number of faulty nodes:
 
-**Honest Majority**: Assumes that strictly more than half of the nodes are honest. This is common in CFT protocols and some BFT protocols. We have talked about CFT protocols, but what about BFT protocols that require a majority of nodes to be honest? One such protocol is the Nakamoto consensus, the consensus protocols utilised by the bitcoin blockchain. 
+**Honest Majority**: Assumes that strictly more than half of the nodes are honest. This is common in CFT protocols and some BFT protocols. We have talked about CFT protocols, but what about BFT protocols that require a majority of nodes to be honest? One such protocol is the Nakamoto consensus, the consensus protocols utilised by the bitcoin blockchain.
 
 **2/3 Honest**: Assumes that at least 2/3 of nodes are honest, which is the minimum required for BFT protocols to guarantee both safety and liveness.
 
@@ -103,19 +86,13 @@ svg [stroke="rgb(0%, 0%, 0%)"], svg [fill="rgb(0%, 0%, 0%)"] {
     justify-content: center;
     width: 100%;
   }
-  
+
   .responsive-svg {
     min-width: 70%;
     height: auto;
   }
-  
+
   .inverted {
     filter: invert(100%);
   }
 </style>
-
-
-
- 
-
-

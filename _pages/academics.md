@@ -7,6 +7,46 @@ classes: wide
 ---
 
 <style>
+  .education-toggle {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .toggle-btn {
+    padding: 0.4rem 1.5rem;
+    background: #3b4252;
+    color: #d8dee9;
+    border: 2px solid #4c566a;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .toggle-btn:hover {
+    background: #434c5e;
+    border-color: #63b3ed;
+  }
+
+  .toggle-btn.active {
+    background: #63b3ed;
+    color: #1a202c;
+    border-color: #63b3ed;
+  }
+
+  .education-section {
+    display: none;
+  }
+
+  .education-section.active {
+    display: block;
+  }
+</style>
+
+<style>
   .academics {
     max-width: 1200px;
     margin: 0 auto;
@@ -128,6 +168,12 @@ classes: wide
   }
 </style>
 
+<div class="education-toggle">
+  <button class="toggle-btn active" onclick="showSection('academics')">Academics</button>
+  <button class="toggle-btn" onclick="showSection('certificates')">Certificates</button>
+</div>
+
+<div id="academics-section" class="education-section active">
 <div class="academics">
   <div class="academic-institution">
     <div class="academic-institution__header">
@@ -137,7 +183,7 @@ classes: wide
       <div class="academic-institution__title-container">
         <h2 class="academic-institution__title">University College London</h2>
         <p class="academic-institution__degree"><strong>MSc Information Security</strong></p>
-        <p class="academic-institution__date">2024 - Present</p>
+        <p class="academic-institution__date">2024 - 2025</p>
       </div>
     </div>
     <div class="academic-institution__content">
@@ -147,8 +193,8 @@ classes: wide
       <div class="experience__projects">
         <strong>Achievements:</strong>
         <ul>
-          <li>Distinction with an %80+ average</li>
-          <li>Achieved a %92 for my thesis: Sharpedo: Dual-Mode Uncertified DAG-Based Consensus Protocol</li>
+          <li>Obtained a Distinction with an %80+ average</li>
+          <li>Achieved 92% for thesis:<br>&nbsp;&nbsp;&nbsp;&nbsp;<em>Sharpedo: Dual-Mode Uncertified DAG-Based Consensus Protocol</em></li>
         </ul>
       </div>
       <div class="academic-institution__skills">
@@ -184,7 +230,7 @@ classes: wide
         <strong>Achievements:</strong>
         <ul>
           <li>First-Class Honours with an 80+ average</li>
-          <li>Achieved a 79% for my thesis: Covid-19 analytics</li>
+          <li>Achieved 79% for thesis:<br>&nbsp;&nbsp;&nbsp;&nbsp;<em>Analytics on the Pandemic</em></li>
         </ul>
       </div>
       <div class="academic-institution__skills">
@@ -227,3 +273,91 @@ classes: wide
     </div>
   </div>
 </div>
+</div>
+
+<div id="certificates-section" class="education-section">
+<div class="academics">
+  <div class="academic-institution">
+    <div class="academic-institution__header">
+      <div class="academic-institution__logo">
+              <img src="/assets/images/tcm-logo.png" alt="TCM Logo">
+      </div>
+      <div class="academic-institution__title-container">
+        <h2 class="academic-institution__title">PNPT</h2>
+        <p class="academic-institution__degree"><strong>TCM Security - Work in Progress</strong></p>
+        <p class="academic-institution__date">Expected 2026</p>
+      </div>
+    </div>
+    <div class="academic-institution__content">
+      <div class="academic-institution__description">
+        <p>Currently pursuing the Practical Network Penetration Tester (PNPT) certification from TCM Security. This hands-on certification focuses on real-world penetration testing skills including external and internal network assessments, Active Directory attacks, and comprehensive reporting.</p>
+      </div>
+      <div class="academic-institution__skills">
+        <h3 class="skills-title">Skills Covered</h3>
+        <div class="skills-grid">
+          <div class="skill-tag">Network Penetration Testing</div>
+          <div class="skill-tag">Active Directory Attacks</div>
+          <div class="skill-tag">Web Application Testing</div>
+          <div class="skill-tag">Linux & Windows Exploitation</div>
+          <div class="skill-tag">OSINT</div>
+          <div class="skill-tag">Privilege Escalation</div>
+          <div class="skill-tag">Vulnerability Assessment</div>
+          <div class="skill-tag">Report Writing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="academic-institution">
+    <div class="academic-institution__header">
+      <div class="academic-institution__logo">
+          <img src="/assets/images/ncsc-logo.png" alt="NCSC Logo">
+      </div>
+      <div class="academic-institution__title-container">
+        <h2 class="academic-institution__title">NCSC Certified MSc</h2>
+        <p class="academic-institution__degree"><strong>Security Management</strong></p>
+        <p class="academic-institution__date">2024-2025</p>
+      </div>
+    </div>
+    <div class="academic-institution__content">
+      <div class="academic-institution__description">
+        <p>My MSc at UCL has been officially certified by the National Cyber Security Centre (NCSC). This certification equipped me with the skills to manage and assess security risks in complex organizational environments.</p>
+      </div>
+      <div class="academic-institution__skills">
+        <h3 class="skills-title">Security Management Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-tag">Risk Assessment</div>
+          <div class="skill-tag">ISO 27001</div>
+          <div class="skill-tag">Compliance Management</div>
+          <div class="skill-tag">Security Auditing</div>
+          <div class="skill-tag">Incident Response</div>
+          <div class="skill-tag">Security Frameworks</div>
+          <div class="skill-tag">Threat Modeling</div>
+          <div class="skill-tag">GDPR Compliance</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+function showSection(section) {
+  // Hide all sections
+  document.getElementById('academics-section').classList.remove('active');
+  document.getElementById('certificates-section').classList.remove('active');
+
+  // Remove active class from all buttons
+  const buttons = document.querySelectorAll('.toggle-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  // Show selected section and activate button
+  if (section === 'academics') {
+    document.getElementById('academics-section').classList.add('active');
+    buttons[0].classList.add('active');
+  } else if (section === 'certificates') {
+    document.getElementById('certificates-section').classList.add('active');
+    buttons[1].classList.add('active');
+  }
+}
+</script>
