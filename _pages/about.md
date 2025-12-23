@@ -168,7 +168,7 @@ classes: wide
         <h3>COVID-19 Analytics</h3>
         <p class="experience-location">Research Project</p>
         <p class="experience-description">Built a system to detect changes in COVID-19 growth rates using public data. Focus on data analysis and visualization.</p>
-        <a href="https://github.com/Hazumino/dissertation" class="btn btn--primary">Learn More</a>
+        <a href="https://github.com/zenodea/dissertation" class="btn btn--primary">Learn More</a>
       </div>
 
       <div class="experience-card">
@@ -178,7 +178,7 @@ classes: wide
         <h3>Mysticeti Protocol</h3>
         <p class="experience-location">Research Project</p>
         <p class="experience-description">Developed a dual DAG protocol for improved blockchain scalability. Focus on distributed systems and consensus mechanisms.</p>
-        <a href="https://github.com/Hazumino/dual-mode-consensus" class="btn btn--primary">Learn More</a>
+        <a href="https://github.com/zenodea/dual-mode-consensus" class="btn btn--primary">Learn More</a>
       </div>
     </div>
   </div>
