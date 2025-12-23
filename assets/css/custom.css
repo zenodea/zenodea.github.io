@@ -134,6 +134,26 @@
     color: #4299e1 !important;
 }
 
+/* Mobile menu toggle */
+.greedy-nav__toggle {
+    color: #63b3ed !important;
+}
+
+.greedy-nav__toggle:hover {
+    color: #4299e1 !important;
+}
+
+.greedy-nav__toggle div,
+.greedy-nav__toggle div::before,
+.greedy-nav__toggle div::after {
+    background: #63b3ed !important;
+}
+
+/* Hide middle line when menu is open */
+.greedy-nav__toggle.close div {
+    background: transparent !important;
+}
+
 /* Override text link colors only (not icons or buttons) */
 .project-link,
 .page__content a:not(.btn):not(.hero-btn),
